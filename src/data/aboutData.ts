@@ -22,17 +22,17 @@ export const educationData: data[] = [
     },
     {
         id: 2,
-        institution: 'Northview HighSchool, Grand Rapids, Michigan, USA',
-        course: 'Studiespesialisering, realfag',
-        startYear: '2009',
-        endYear: '2010',
+        title: 'Northview HighSchool, Grand Rapids, Michigan, USA',
+        description: 'Studiespesialisering, realfag',
+        startDate: '2009',
+        endDate: '2010',
     },
     {
         id: 3,
-        institution: 'Sande Videregående Skole, Sande i Vestfold, Norge',
-        course: 'Studiespesialisering, realfag',
-        startYear: '2008',
-        endYear: '2011',
+        title: 'Sande Videregående Skole, Sande i Vestfold, Norge',
+        description: 'Studiespesialisering, realfag',
+        startDate: '2008',
+        endDate: '2011',
     },
 ]
 

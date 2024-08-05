@@ -1,0 +1,11 @@
+.navbar {
+    display: flex;
+    min-width: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .Navbar.Brand {
+    justify-self: flex-start;
+    position: relative;
+}
