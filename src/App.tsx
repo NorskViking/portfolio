@@ -1,25 +1,17 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Button from "react-bootstrap/Button";
 import Navbar from './components/navbar/navbar';
+import Container from "react-bootstrap/Container";
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode((prevMode) => !prevMode);
-  };
 
   return (
-    <div className={`d-flex flex-column justify-content-center align-items-center ${isDarkMode ? 'bg-dark text-light' : 'bg-light'}`} >
+    <Container fluid >
       <Navbar />
-      <Button variant="primary" onClick={toggleDarkMode}>
-          Toggle theme
-      </Button>
-    </div>
+    </Container>
   );
 }
 
