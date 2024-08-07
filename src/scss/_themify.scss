@@ -13,3 +13,7 @@
         }
     }
 }
+
+@mixin gradient-directional($start-color: #012A4A, $mid-color: #013A63, $end-color: #01497C, $deg: 45dec) {
+    background-image: linear-gradient($deg, $start-color, $mid-color, $end-color);
+}

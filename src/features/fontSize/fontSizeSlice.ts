@@ -1,35 +1,23 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import { create } from "domain";
 
-export interface FontSizeState {
-    value: number
-    status: 'idle' | 'loading' | 'failed'
-}
+type FontSizeState = {
+    size: "small" | "medium" | "large" | "xl" | "xxl";
+};
 
-// Define the initial fontSize value for the slice state
 const initialState: FontSizeState = {
-    value: 18,
-    status: 'idle'
-}
+    size: "medium",
+};
 
-// Redux slice for FontSize
-export const fontSizeSlice = createSlice({
-    name: 'fontSize',
+const fontSizeSlice = createSlice({
+    name: "fontSize",
     initialState,
-
     reducers: {
-        increment: state => {
-            state.value += 1
-        },
-        decrement: state => {
-            state.value -= 1
-        },
-        incrementByAmount: (state, action: PayloadAction<number>) => {
-            state.value += action.payload
+        setFontSize: (state, action) => {
+            state.size = action.payload;
         }
     }
 })
 
-export const { increment, decrement, incrementByAmount } = fontSizeSlice.actions
-
-export default fontSizeSlice.reducer
+export const { setFontSize } = fontSizeSlice.actions;
+export default fontSizeSlice.reducer;
