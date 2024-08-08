@@ -1,0 +1,73 @@
+.custom-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.theme-switch-input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.theme-switch-input + .theme-switch-handle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.theme-switch-input + .theme-switch-handle i {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  color: white;
+  top: 3px;
+  transition: opacity 0.4s;
+}
+
+.theme-switch-input + .theme-switch-handle .bi-sun {
+  left: 5px;
+  opacity: 1;
+}
+
+.theme-switch-input + .theme-switch-handle .bi-moon {
+  right: 5px;
+  opacity: 0;
+}
+
+.theme-switch-input:checked + .theme-switch-handle {
+  background-color: #007bff;
+}
+
+.theme-switch-input:checked + .theme-switch-handle .bi-sun {
+  opacity: 0;
+}
+
+.theme-switch-input:checked + .theme-switch-handle .bi-moon {
+  opacity: 1;
+}
+
+.theme-switch-input:checked + .theme-switch-handle::before {
+  transform: translateX(30px);
+}
+
+.theme-switch-handle::before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: transform 0.4s;
+  border-radius: 50%;
+}

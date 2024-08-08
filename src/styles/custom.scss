@@ -169,6 +169,62 @@ body {
     & body { font-family: map-get($font-families, 'Comfortaa'); }
 }
 
+.theme-switch {
+    position: relative;
+    padding-left: 3rem;
+
+    .form-check-input {
+        width: 2.5rem;
+        height: 1.5rem;
+        background-color: #ddd;
+        border-radius: 2rem;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+    &:checked {
+        background-color: #007bff;
+
+        &::after {
+            transform: translateX(1rem);
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0.25rem;
+        left: 0.25rem;
+        width: 1rem;
+        height: 1rem;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+    }
+    }
+
+    .theme-switch-icons {
+        position: absolute;
+        top: 50%;
+        left: 0.5rem;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 2rem;
+
+        .bi {
+            font-size: 1rem;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+
+        &.active {
+            opacity: 1;
+        }
+        }
+    }
+}
+
 // Import Bootstrap components
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/type";

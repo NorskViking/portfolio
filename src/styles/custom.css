@@ -199,11 +199,11 @@
 }
 
 [data-bs-theme=dark] {
-  --bs-body-bg: #0223EA;
+  --bs-body-bg: #03045E;
   --bs-body-color: #ffffff;
-  --bs-card-bg: #03045E;
+  --bs-card-bg: #0223EA;
   --bs-card-color: #ffffff;
-  --bs-btn-bg: #03045E;
+  --bs-btn-bg: #0223EA;
   --bs-btn-color: #ffffff;
   --bs-btn-hover-bg: #011f4b;
   --bs-link-color: #0077B6;
@@ -233,6 +233,130 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+
+body {
+  font-size: 1.25rem;
+  font-family: "Open Sans, sans-serif";
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+[data-font-size=small] body {
+  font-size: 0.875rem;
+}
+
+[data-font-size=medium] body {
+  font-size: 1.25rem;
+}
+
+[data-font-size=large] body {
+  font-size: 1.75rem;
+}
+
+[data-font-size=xl] body {
+  font-size: 2rem;
+}
+
+[data-font-size=xxl] body {
+  font-size: 4rem;
+}
+
+[data-font-family="Open Sans"] body {
+  font-family: "Open Sans, sans-serif";
+}
+
+[data-font-family=Kosugi] body {
+  font-family: "Kosugi, sans-serif";
+}
+
+[data-font-family="Kosugi Maru"] body {
+  font-family: "Kosugi Maru, sans-serif";
+}
+
+[data-font-family=Alef] body {
+  font-family: "Alef, sans-serif";
+}
+
+[data-font-family="Merriweather Sans"] body {
+  font-family: "Merriweather Sans, sans-serif";
+}
+
+[data-font-family=Oxygen] body {
+  font-family: "Oxygen, sans-serif";
+}
+
+[data-font-family="Barlow Semi Condensed"] body {
+  font-family: "Barlow Semi Condensed, sans-serif";
+}
+
+[data-font-family=Quicksand] body {
+  font-family: "Quicksand, sans-serif";
+}
+
+[data-font-family="Work Sans"] body {
+  font-family: "Work Sans, sans-serif";
+}
+
+[data-font-family=Roboto] body {
+  font-family: "Roboto, sans-serif";
+}
+
+[data-font-family="Concert One"] body {
+  font-family: "Concert One, sans-serif";
+}
+
+[data-font-family=Comfortaa] body {
+  font-family: "Comfortaa, sans-serif";
+}
+
+.theme-switch {
+  position: relative;
+  padding-left: 3rem;
+}
+.theme-switch .form-check-input {
+  width: 2.5rem;
+  height: 1.5rem;
+  background-color: #ddd;
+  border-radius: 2rem;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.theme-switch .form-check-input:checked {
+  background-color: #007bff;
+}
+.theme-switch .form-check-input:checked::after {
+  transform: translateX(1rem);
+}
+.theme-switch .form-check-input::after {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.theme-switch .theme-switch-icons {
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 2rem;
+}
+.theme-switch .theme-switch-icons .bi {
+  font-size: 1rem;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.theme-switch .theme-switch-icons .bi.active {
+  opacity: 1;
 }
 
 *,

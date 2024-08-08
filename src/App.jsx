@@ -1,14 +1,9 @@
 import React from 'react';
-import './App.css';
+//import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Provider } from 'react-redux';
-import store from './app/store';
+import SettingsModal from './components/modal/SettingsModal';
 
-import ThemeToggle from './features/theme/themeButton';
-import FontSizeToggle from './features/fontSize/fontSizeButton';
-
-import Button from "react-bootstrap/Button";
 import Navbar from './components/navbar/navbar';
 import Container from "react-bootstrap/Container";
 
@@ -16,11 +11,9 @@ import Container from "react-bootstrap/Container";
 const App: React.FC = () => {
 
   return (
-    <Provider store={store}>
       <Container fluid className='App' style={{height:"400vh", width:"100vw"}}>
         <Navbar />
-        <ThemeToggle />
-        <FontSizeToggle />
+        <SettingsModal />
         <div>
           <p> This is some text for testing changes of size and font </p>
         </div>
@@ -41,7 +34,6 @@ const App: React.FC = () => {
           </ul>
         </Container>
       </Container>
-    </Provider>
   );
 }
 
