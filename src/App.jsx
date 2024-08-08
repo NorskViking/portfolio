@@ -1,26 +1,33 @@
-import React from 'react';
-import './App.css';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { Rootstate } from "./store/rootReducer"
+//import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Provider } from 'react-redux';
-import store from './app/store';
+import SettingsModal from './components/modal/SettingsModal';
 
-import ThemeToggle from './features/theme/themeButton';
-import FontSizeToggle from './features/fontSize/fontSizeButton';
-
-import Button from "react-bootstrap/Button";
 import Navbar from './components/navbar/navbar';
 import Container from "react-bootstrap/Container";
 
 
 const App: React.FC = () => {
+  const isDarkMode = useSelector((state: Rootstate) => state.theme.isDarkMode);
+  const fontSize = useSelector((state: Rootstate) => state.fontSize.fontSize);
+  const fontFamily = useSelector((state: Rootstate) => state.fontFamily.fontFamily);
+
+  useEffect(() => {
+    const rootElement = document.documentElement;
+    if (isDarkMode) {
+      rootElement.setAttribute("data-bs-theme", "dark");
+    } else {
+      rootElement.setAttribute("data-bs-theme", "light");
+    }
+  }, [isDarkMode])
 
   return (
-    <Provider store={store}>
-      <Container fluid className='App' style={{height:"400vh", width:"100vw"}}>
+      <Container fluid className='App' style={{height:"400vh", width:"100vw", fontSize, fontFamily}}>
         <Navbar />
-        <ThemeToggle />
-        <FontSizeToggle />
+        <SettingsModal />
         <div>
           <p> This is some text for testing changes of size and font </p>
         </div>
@@ -41,7 +48,6 @@ const App: React.FC = () => {
           </ul>
         </Container>
       </Container>
-    </Provider>
   );
 }
 
