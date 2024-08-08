@@ -4,8 +4,6 @@ import Nav from "react-bootstrap/Nav";
 import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 
-
-
 import logoLight from "../../assets/png/logo-lightblue.png";
 import logoDark from "../../assets/png/Logo-darkblue.png";
 import darkBlue from "../../assets/png/darkBlue-Logo.png";
@@ -19,6 +17,7 @@ function navbar() {
             id="navbar"
             role="navigation"
             aria-current="page"
+            data-theme=""
         >
             <Container fluid className="justify-content-between mx-auto">
                 <Navbar.Brand className="justify-content-start">
