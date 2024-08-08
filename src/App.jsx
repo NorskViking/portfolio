@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { Rootstate } from "./store/rootReducer"
 //import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -9,9 +11,21 @@ import Container from "react-bootstrap/Container";
 
 
 const App: React.FC = () => {
+  const isDarkMode = useSelector((state: Rootstate) => state.theme.isDarkMode);
+  const fontSize = useSelector((state: Rootstate) => state.fontSize.fontSize);
+  const fontFamily = useSelector((state: Rootstate) => state.fontFamily.fontFamily);
+
+  useEffect(() => {
+    const rootElement = document.documentElement;
+    if (isDarkMode) {
+      rootElement.setAttribute("data-bs-theme", "dark");
+    } else {
+      rootElement.setAttribute("data-bs-theme", "light");
+    }
+  }, [isDarkMode])
 
   return (
-      <Container fluid className='App' style={{height:"400vh", width:"100vw"}}>
+      <Container fluid className='App' style={{height:"400vh", width:"100vw", fontSize, fontFamily}}>
         <Navbar />
         <SettingsModal />
         <div>

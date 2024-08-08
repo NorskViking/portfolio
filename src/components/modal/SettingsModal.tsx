@@ -8,10 +8,6 @@ import { Modal, Button, Form } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../styles/settingsModal.css";
 
-interface SettingsModalProps {
-    onClose: () => void;
-}
-
 const fontOptions = [
     'Open Sans',
     'Kosugi',
@@ -67,7 +63,7 @@ const SettingsModal: React.FC<{ show: boolean; handleClose: () => void }> = ({ s
                     </Form.Label>
                     <Form.Select id="fontFamilySelect" value={currentFontFamily} onChange={handleFontChange}>
                         {fontOptions.map((font) => (
-                            <option key={font} value={font}>{font}</option>
+                            <option key={font} value={font} style={{ fontFamily: font}}>{font}</option>
                         ))}
                     </Form.Select>
                 </Form.Group>
@@ -77,7 +73,7 @@ const SettingsModal: React.FC<{ show: boolean; handleClose: () => void }> = ({ s
                     </Form.Label>
                     <Form.Select id="fontSizeSelect" value={currentFontSize} onChange={handleFontSizeChange}>
                         {fontSizeOptions.map((size) => (
-                            <option key={size} value={size}>{size}</option>
+                            <option key={size} value={size} style={{fontSize: size}}>{size}</option>
                         ))}
                     </Form.Select>
                 </Form.Group>

@@ -236,30 +236,30 @@ a:hover {
 }
 
 body {
-  font-size: 1.25rem;
+  font-size: 16px;
   font-family: "Open Sans, sans-serif";
   background: var(--bs-body-bg);
   color: var(--bs-body-color);
 }
 
 [data-font-size=small] body {
-  font-size: 0.875rem;
+  font-size: 12px;
 }
 
 [data-font-size=medium] body {
-  font-size: 1.25rem;
+  font-size: 16px;
 }
 
 [data-font-size=large] body {
-  font-size: 1.75rem;
+  font-size: 20px;
 }
 
 [data-font-size=xl] body {
-  font-size: 2rem;
+  font-size: 24px;
 }
 
 [data-font-size=xxl] body {
-  font-size: 4rem;
+  font-size: 30px;
 }
 
 [data-font-family="Open Sans"] body {

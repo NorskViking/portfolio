@@ -85,11 +85,11 @@ a {
 
 // Font sizes
 $font-sizes: (
-    small: 0.875rem,
-    medium: 1.25rem,
-    large: 1.75rem,
-    xl: 2rem,
-    xxl: 4rem
+    small: 12px,
+    medium: 16px,
+    large: 20px,
+    xl: 24px,
+    xxl: 30px
 );
 
 // Font families
@@ -126,10 +126,10 @@ body {
     & body { font-size: map-get($font-sizes, large); }
 }
 [data-font-size="xl"] {
-    & body { font-size: map-get($font-sizes, xl); }
+    & body { font-size: 24px; }
 }
 [data-font-size="xxl"] {
-    & body { font-size: map-get($font-sizes, xxl); }
+    & body { font-size: 30px; }
 }
 
 [data-font-family="Open Sans"] {
