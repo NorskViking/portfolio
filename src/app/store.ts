@@ -1,4 +1,3 @@
-import type { Action, ThunkAction } from '@reduxjs/toolkit';
 import { configureStore } from '@reduxjs/toolkit';
 import themeReducer from "../features/theme/themeSlice";
 import fontSizeReducer from "../features/fontSize/fontSizeSlice"

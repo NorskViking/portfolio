@@ -27,28 +27,3 @@ const ThemeToggle: React.FC = () => {
 };
 
 export default ThemeToggle;
-
-
-
-/**
- import React, { useEffect } from "react";
- import { Button } from "react-bootstrap";
- import { useDispatch, useSelector } from "react-redux";
- import { toggleTheme } from "./themeSlice";
- 
- 
- const ThemeButton = () => {
-   const dispatch = useDispatch();
-   const theme = useSelector((state) => state.theme.theme);
- 
-   return (
-     <Button onClick={() => dispatch(toggleTheme())}>
-       
-     </Button>
-   )
-   
- }
- 
- export default ThemeButton;
-
- */

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { create } from "domain";
 
 type FontSizeState = {
     size: "small" | "medium" | "large" | "xl" | "xxl";

@@ -1,5 +1,5 @@
 import React from 'react';
-//import './App.css';
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Provider } from 'react-redux';
@@ -17,7 +17,7 @@ const App: React.FC = () => {
 
   return (
     <Provider store={store}>
-      <Container className='App' fluid style={{height:"400vh", width:"100vw"}}>
+      <Container fluid className='App' style={{height:"400vh", width:"100vw"}}>
         <Navbar />
         <ThemeToggle />
         <FontSizeToggle />
