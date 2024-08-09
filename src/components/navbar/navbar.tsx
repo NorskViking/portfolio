@@ -19,7 +19,6 @@ function navbar() {
             id="navbar"
             role="navigation"
             aria-current="page"
-            data-theme=""
         >
             <Container fluid className="justify-content-between mx-auto">
                 <Navbar.Brand className="justify-content-start">

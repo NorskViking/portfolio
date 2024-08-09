@@ -1,0 +1,9 @@
+
+.landing-portrait {
+    position: absolute;
+    --img-size: 20rem;
+    left: 50vw;
+    bottom: -50%;
+    width: var(--img-size);
+    height: var(--img-size);
+}

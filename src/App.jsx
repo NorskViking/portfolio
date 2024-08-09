@@ -1,14 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Rootstate } from "./store/rootReducer"
-//import './App.css';
+import Container from "react-bootstrap/Container";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import SettingsModal from './components/modal/SettingsModal';
-
 import Navbar from './components/navbar/navbar';
-import Container from "react-bootstrap/Container";
-
+import LandingPage from './pages/LandingPage';
 
 const App: React.FC = () => {
   const isDarkMode = useSelector((state: Rootstate) => state.theme.isDarkMode);
@@ -27,7 +24,7 @@ const App: React.FC = () => {
   return (
       <Container fluid className='App' style={{height:"400vh", width:"100vw", fontSize, fontFamily}}>
         <Navbar />
-        <SettingsModal />
+        <LandingPage />
         <div>
           <p> This is some text for testing changes of size and font </p>
         </div>
