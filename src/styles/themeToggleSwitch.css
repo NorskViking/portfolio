@@ -30,7 +30,8 @@
   height: 24px;
   font-size: 18px;
   color: white;
-  top: 3px;
+  top: 50%;
+  transform: translateY(-50%);
   transition: opacity 0.4s;
 }
 
