@@ -2,34 +2,38 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Rootstate } from "../../store/rootReducer";
 import { toggleFontFamily } from "../../store/fontFamilySlice";
-import { toggleFontSize } from "../../store/fontSizeSlice";
+import { toggleFontSize, FontSize } from "../../store/fontSizeSlice";
 import { toggleTheme } from "../../store/themeSlice";
 import { Modal, Button, Form } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../styles/settingsModal.css";
 
 const fontOptions = [
-    'Open Sans',
-    'Kosugi',
-    'Kosugi Maru',
-    'Alef',
-    'Merriweather Sans',
-    'Oxygen',
-    'Barlow Semi Condensed',
-    'Quicksand',
-    'Work Sans',
-    'Roboto',
-    'Concert One',
-    'Comfortaa'
+    "Open Sans",
+    "Kosugi",
+    "Kosugi Maru",
+    "Alef",
+    "Merriweather Sans",
+    "Oxygen",
+    "Barlow Semi Condensed",
+    "Quicksand",
+    "Work Sans",
+    "Roboto",
+    "Concert One",
+    "Comfortaa"
 ];
 
 const fontSizeOptions = [
     "small",
     "medium",
     "large",
-    "xl",
-    "xxl"
+    "x-large",
+    "xx-large"
 ];
+
+const isFontSize = (value: string): value is FontSize => {
+    return ["small", "medium", "large", "x-large", "xx-large"].includes(value);
+}
 
 const SettingsModal: React.FC<{ show: boolean; handleClose: () => void }> = ({ show, handleClose }) => {
     const dispatch = useDispatch();
@@ -37,12 +41,19 @@ const SettingsModal: React.FC<{ show: boolean; handleClose: () => void }> = ({ s
     const currentFontFamily = useSelector((state: Rootstate) => state.fontFamily.fontFamily);
     const isDarkMode = useSelector((state: Rootstate) => state.theme.isDarkMode);
 
+
     const handleFontChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         dispatch(toggleFontFamily(event.target.value));
     };
 
     const handleFontSizeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        dispatch(toggleFontSize(event.target.value));
+        const selectedFontSize = event.target.value;
+
+        if (isFontSize(selectedFontSize)) {
+            dispatch(toggleFontSize(selectedFontSize));
+        } else {
+            console.error("Invalid font size selected");
+        }
     };
 
     const handleThemeToggle = () => {

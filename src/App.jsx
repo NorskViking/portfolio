@@ -47,6 +47,12 @@ const App: React.FC = () => {
             <p style={{fontFamily:"Barlow Semi Condensed"}}>Barlow Semi Condensed</p>
           </ul>
         </Container>
+        <Container fluid>
+          <article>
+            <p>Here we put some text to test out visual changes when changing the settings.</p>
+            <p>Her er noe mer tekst på norsk, vi skal forsøke å implementere oversettelse på et tidspunkt.</p>
+          </article>
+        </Container>
       </Container>
   );
 }
