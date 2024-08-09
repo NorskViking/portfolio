@@ -4,6 +4,7 @@ import { toggleTheme } from "../../store/themeSlice";
 import { Rootstate } from "../../store/rootReducer";
 import { Form } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "../../styles/themeToggleSwitch.css"
 
 const ThemeToggleSwitch: React.FC = () => {
     const dispatch = useDispatch();
