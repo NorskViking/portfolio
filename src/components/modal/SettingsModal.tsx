@@ -6,7 +6,12 @@ import ThemeToggleSwitch from "../settings/ThemeToggle";
 
 const SettingsModal: React.FC<{ show: boolean; handleClose: () => void }> = ({ show, handleClose }) => {
     return (
-        <Modal show={show} onHide={handleClose} id="settingsModal" aria-labelledby="settingsModalLabel">
+        <Modal
+            show={show}
+            onHide={handleClose}
+            aria-labelledby="settingsModalLabel"
+            dialogClassName="custom-modal"
+            >
             <Modal.Header closeButton>
                 <Modal.Title id="settingsModalLabel">
                     Settings

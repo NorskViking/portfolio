@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Rootstate } from "./store/rootReducer"
-//import './App.css';
+import Container from "react-bootstrap/Container";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import SettingsModal from './components/modal/SettingsModal';
+import './styles/custom.scss';
 
 import Navbar from './components/navbar/navbar';
-import Container from "react-bootstrap/Container";
-
+import LandingPage from './pages/LandingPage';
 
 const App: React.FC = () => {
   const isDarkMode = useSelector((state: Rootstate) => state.theme.isDarkMode);
@@ -27,7 +25,7 @@ const App: React.FC = () => {
   return (
       <Container fluid className='App' style={{height:"400vh", width:"100vw", fontSize, fontFamily}}>
         <Navbar />
-        <SettingsModal />
+        <LandingPage />
         <div>
           <p> This is some text for testing changes of size and font </p>
         </div>
@@ -45,6 +43,21 @@ const App: React.FC = () => {
             <p style={{fontFamily:"Kosugi Maru"}}>Kosugi Maru</p>
             <p style={{fontFamily:"Alef"}}>Alef</p>
             <p style={{fontFamily:"Barlow Semi Condensed"}}>Barlow Semi Condensed</p>
+          </ul>
+          <ul>
+            <p> A paragraph element </p>
+            <h1> A H1 element </h1>
+            <p> A paragraph element </p>
+            <h2> A H2 element </h2>
+            <p> A paragraph element </p>
+            <h3> A H3 element </h3>
+            <p> A paragraph element </p>
+            <h4> A H4 element </h4>
+            <p> A paragraph element </p>
+            <h5> A H5 element</h5>
+            <p> A paragraph element </p>
+            <h6> A H6 element</h6>
+            <p> A paragraph element </p>
           </ul>
         </Container>
         <Container fluid>
