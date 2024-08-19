@@ -44,6 +44,21 @@ const App: React.FC = () => {
             <p style={{fontFamily:"Alef"}}>Alef</p>
             <p style={{fontFamily:"Barlow Semi Condensed"}}>Barlow Semi Condensed</p>
           </ul>
+          <ul>
+            <p> A paragraph element </p>
+            <h1> A H1 element </h1>
+            <p> A paragraph element </p>
+            <h2> A H2 element </h2>
+            <p> A paragraph element </p>
+            <h3> A H3 element </h3>
+            <p> A paragraph element </p>
+            <h4> A H4 element </h4>
+            <p> A paragraph element </p>
+            <h5> A H5 element</h5>
+            <p> A paragraph element </p>
+            <h6> A H6 element</h6>
+            <p> A paragraph element </p>
+          </ul>
         </Container>
         <Container fluid>
           <article>
