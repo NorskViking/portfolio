@@ -14,8 +14,7 @@ import lightBlue from "../../assets/png/lightBlue-logo.png"
 function navbar() {
     return (
         <Navbar 
-            sticky="top" 
-            className="bg-body-tertiary" 
+            sticky="top"
             id="navbar"
             role="navigation"
             aria-current="page"

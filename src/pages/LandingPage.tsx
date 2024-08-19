@@ -16,9 +16,9 @@ const LandingPage: React.FC = () => {
                 </Row>
                 <Row id="poem">
                     <article className="justify-content-center">
-                        <p>"Logic in each in</p>
-                        <p>Bugs hide, then errors</p>
-                        <p>Unwind</p>
+                        <p>"Logic in each line,</p>
+                        <p>Bugs hide, then errors.</p>
+                        <p>Unwind,</p>
                         <p>Coffee fuels the fix."</p>
                     </article>
                 </Row>
