@@ -2,9 +2,9 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../../store/themeSlice";
 import { Rootstate } from "../../store/rootReducer";
-import { Form } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "../../styles/themeToggleSwitch.css"
+import "../../styles/themeToggleButton.css";
 
 const ThemeToggleSwitch: React.FC = () => {
     const dispatch = useDispatch();
@@ -14,26 +14,29 @@ const ThemeToggleSwitch: React.FC = () => {
         dispatch(toggleTheme());
     };
 
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            handleThemeToggle();
+        }
+    };
+
     return (
-        <Form.Group controlId="themeToggle">
-            <Form.Label>
-                Theme Mode
-            </Form.Label>
-            <div className="custom-switch">
-                <Form.Check
-                    type="switch"
-                    checked={isDarkMode}
-                    onChange={handleThemeToggle}
-                    label=""
-                    className="theme-switch-input"
-                />
-                <span className="theme-switch-handle">
-                    <i className="bi bi-sun"></i>
-                    <i className="bi bi-moon"></i>
-                </span>
-            </div>
-        </Form.Group>
-    )
-}
+        <Button
+            variant={isDarkMode ? "dark" : "warning"} /* Dark for dark mode, Warning for light mode */
+            onClick={handleThemeToggle}
+            onKeyDown={handleKeyDown}
+            className={`theme-toggle-btn ${isDarkMode ? 'dark-mode' : 'light-mode'}`}
+            aria-pressed={isDarkMode}
+            aria-label="Toggle theme mode"
+        >
+            {isDarkMode ? (
+                <i className="bi bi-moon-stars-fill"></i>
+            ) : (
+                <i className="bi bi-sun-fill"></i>
+            )}
+        </Button>
+    );
+};
 
 export default ThemeToggleSwitch;
