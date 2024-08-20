@@ -1,6 +1,8 @@
 #landingPage {
     padding: 2rem;
     margin-bottom: 3rem;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 #landingPage #landing-info {
