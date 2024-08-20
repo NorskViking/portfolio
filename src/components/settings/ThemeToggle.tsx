@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../../styles/themeToggleButton.css";
 
-const ThemeToggleSwitch: React.FC = () => {
+const ThemeToggleButton: React.FC = () => {
     const dispatch = useDispatch();
     const isDarkMode = useSelector((state: Rootstate) => state.theme.isDarkMode);
 
@@ -39,4 +39,4 @@ const ThemeToggleSwitch: React.FC = () => {
     );
 };
 
-export default ThemeToggleSwitch;
+export default ThemeToggleButton;
