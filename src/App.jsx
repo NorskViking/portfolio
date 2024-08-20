@@ -23,49 +23,9 @@ const App: React.FC = () => {
   }, [isDarkMode])
 
   return (
-      <Container fluid className='App' style={{padding: "0", margin: "0", height:"400vh", width:"100vw", fontSize, fontFamily}}>
+      <Container fluid className='App' style={{padding: "0", margin: "0", fontSize, fontFamily}}>
         <Navbar />
         <LandingPage />
-        <Container fluid style={{paddingLeft: "1rem"}}>
-        <div>
-          <p> This is some text for testing changes of size and font </p>
-        </div>
-          <ul>
-            <p style={{fontFamily:"Open Sans"}}>Open Sans</p>
-            <p style={{fontFamily:"Concert One"}}>Concert One</p>
-            <p style={{fontFamily:"Comfortaa"}}>Comfortaa</p>
-            <p style={{fontFamily:"Roboto"}}>Roboto</p>
-            <p style={{fontFamily:"Work Sans"}}>Work Sans</p>
-            <p style={{fontFamily:"Quicksand"}}>Quicksand</p>
-            <p style={{fontFamily:"Oxygen"}}>Oxygen</p>
-            <p style={{fontFamily:"Merriweather Sans"}}>Merriweather Sans</p>
-            <p style={{fontFamily:"Kosugi"}}>Kosugi</p>
-            <p style={{fontFamily:"Kosugi Maru"}}>Kosugi Maru</p>
-            <p style={{fontFamily:"Alef"}}>Alef</p>
-            <p style={{fontFamily:"Barlow Semi Condensed"}}>Barlow Semi Condensed</p>
-          </ul>
-          <ul>
-            <p> A paragraph element </p>
-            <h1> A H1 element </h1>
-            <p> A paragraph element </p>
-            <h2> A H2 element </h2>
-            <p> A paragraph element </p>
-            <h3> A H3 element </h3>
-            <p> A paragraph element </p>
-            <h4> A H4 element </h4>
-            <p> A paragraph element </p>
-            <h5> A H5 element</h5>
-            <p> A paragraph element </p>
-            <h6> A H6 element</h6>
-            <p> A paragraph element </p>
-          </ul>
-        </Container>
-        <Container fluid>
-          <article>
-            <p>Here we put some text to test out visual changes when changing the settings.</p>
-            <p>Her er noe mer tekst på norsk, vi skal forsøke å implementere oversettelse på et tidspunkt.</p>
-          </article>
-        </Container>
       </Container>
   );
 }
