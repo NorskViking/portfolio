@@ -24,8 +24,8 @@ $light-accent: #0077B6;
 $light-text: #000;
 
 // Gradient Backgrounds
-$dark-bg-gradient: linear-gradient(to bottom right, $dark-bg, darken($dark-bg, 10%));
-$light-bg-gradient: linear-gradient(to bottom right, $light-bg, lighten($light-bg, 10%));
+$dark-bg-gradient: linear-gradient(to bottom, $dark-bg, darken($dark-bg, 10%));
+$light-bg-gradient: linear-gradient(to bottom, $light-bg, lighten($light-bg, 10%));
 
 // Define CSS variables based on the theme
 [data-bs-theme="dark"] {
@@ -34,23 +34,23 @@ $light-bg-gradient: linear-gradient(to bottom right, $light-bg, lighten($light-b
     --bs-navbar-bg: #{$dark-nav-bg};
     --bs-card-bg: #{$dark-primary};
     --bs-modal-bg: #{$dark-secondary};
-    --bs-modal-color: #FFFFFF;
-    --bs-modal-border-color: #0077B6;
+    --bs-modal-color: #{$dark-text};
+    --bs-modal-border-color: #{$dark-primary};
     --bs-btn-primary-bg: #{$dark-primary};
     --bs-btn-primary-border-color: #{$dark-secondary};
     --bs-btn-primary-color: #{$dark-text};
     --bs-link-color: #{$dark-accent};
     --bs-link-hover-color: darken($dark-accent, 10%);
     --bs-tooltip-bg: darken($dark-primary, 10%);
-    --bs-tooltip-color: #FFFFFF;
+    --bs-tooltip-color: #{$dark-text};
     --bs-dropdown-bg: #{$dark-primary};
     --bs-dropdown-color: #{$dark-text};
     --bs-input-bg: #{$dark-primary};
-    --bs-input-color: #FFFFFF;
+    --bs-input-color: #{$dark-text};
     --bs-form-bg: #{$dark-bg};
     --bs-form-color: #{$dark-text};
     --bs-table-bg: #{$dark-primary};
-    --bs-table-color: #FFFFFF;
+    --bs-table-color: #{$dark-text};
 }
 
 [data-bs-theme="light"] {
@@ -59,29 +59,31 @@ $light-bg-gradient: linear-gradient(to bottom right, $light-bg, lighten($light-b
     --bs-navbar-bg: #{$light-nav-bg};
     --bs-card-bg: #{$light-primary};
     --bs-modal-bg: #{$light-secondary};
-    --bs-modal-color: #03045E;
-    --bs-modal-border-color: #00B4D8;
+    --bs-modal-color: #{$light-text};
+    --bs-modal-border-color: #{$light-primary};
     --bs-btn-primary-bg: #{$light-primary};
     --bs-btn-primary-border-color: #{$light-secondary};
     --bs-btn-primary-color: #{$light-text};
     --bs-link-color: #{$light-accent};
     --bs-link-hover-color: darken($light-accent, 10%);
     --bs-tooltip-bg: darken($light-primary, 10%);
-    --bs-tooltip-color: #03045E;
+    --bs-tooltip-color: #{$light-text};
     --bs-dropdown-bg: #{$light-primary};
     --bs-dropdown-color: #{$light-text};
     --bs-input-bg: #{$light-primary};
-    --bs-input-color: #03045E;
+    --bs-input-color: #{$light-text};
     --bs-form-bg: #{$light-bg};
     --bs-form-color: #{$light-text};
     --bs-table-bg: #{$light-primary};
-    --bs-table-color: #03045E;
+    --bs-table-color: #{$light-text};
 }
 
 // Component-specific styles
 .modal-content {
     background-color: var(--bs-modal-bg) !important;
     color: var(--bs-modal-color) !important;
+    opacity: 100 !important;
+    z-index: 100;
     border: 1px solid var(--bs-modal-border-color) !important;
     background-clip: padding-box;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
@@ -148,19 +150,76 @@ body {
 
 // Adding custom font-sizes
 [data-font-size="small"] {
-    & body { font-size: small; }
+    body {
+        font-size: 0.8rem;
+    }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.4rem; }
+    h4 { font-size: 1.2rem; }
+    h5 { font-size: 1rem; }
+    h6 { font-size: 0.8rem; }
 }
+
 [data-font-size="medium"] {
-    & body { font-size: medium; }
+    body {
+        font-size: 1rem;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+    h5 { font-size: 1.125rem; }
+    h6 { font-size: 1rem; }
 }
+
 [data-font-size="large"] {
-    & body { font-size: large; }
+    body {
+        font-size: 1.2rem;
+    }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+    h4 { font-size: 1.5rem; }
+    h5 { font-size: 1.3rem; }
+    h6 { font-size: 1.1rem; }
 }
+
 [data-font-size="x-large"] {
-    & body { font-size: x-large; }
+    body {
+        font-size: 1.4rem;
+    }
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 2.2rem; }
+    h3 { font-size: 2rem; }
+    h4 { font-size: 1.75rem; }
+    h5 { font-size: 1.5rem; }
+    h6 { font-size: 1.2rem; }
 }
+
 [data-font-size="xx-large"] {
-    & body { font-size: xx-large; }
+    body {
+        font-size: 1.6rem;
+    }
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 2.4rem; }
+    h3 { font-size: 2.2rem; }
+    h4 { font-size: 2rem; }
+    h5 { font-size: 1.75rem; }
+    h6 { font-size: 1.3rem; }
+}
+
+[data-font-size="xxx-large"] {
+    body {
+        font-size: 1.8rem;
+    }
+    p { font-size: 1.8rem; }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.6rem; }
+    h3 { font-size: 2.4rem; }
+    h4 { font-size: 2.2rem; }
+    h5 { font-size: 2rem; }
+    h6 { font-size: 1.4rem; }
 }
 
 // Adding custom google-fonts

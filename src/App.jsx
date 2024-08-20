@@ -23,13 +23,13 @@ const App: React.FC = () => {
   }, [isDarkMode])
 
   return (
-      <Container fluid className='App' style={{height:"400vh", width:"100vw", fontSize, fontFamily}}>
+      <Container fluid className='App' style={{padding: "0", margin: "0", height:"400vh", width:"100vw", fontSize, fontFamily}}>
         <Navbar />
         <LandingPage />
+        <Container fluid style={{paddingLeft: "1rem"}}>
         <div>
           <p> This is some text for testing changes of size and font </p>
         </div>
-        <Container fluid >
           <ul>
             <p style={{fontFamily:"Open Sans"}}>Open Sans</p>
             <p style={{fontFamily:"Concert One"}}>Concert One</p>

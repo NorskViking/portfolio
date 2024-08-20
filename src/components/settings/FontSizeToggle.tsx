@@ -9,11 +9,12 @@ const fontSizeOptions = [
     "medium",
     "large",
     "x-large",
-    "xx-large"
+    "xx-large",
+    "xxx-large"
 ];
 
 const isFontSize = (value: string): value is FontSize => {
-    return ["small", "medium", "large", "x-large", "xx-large"].includes(value);
+    return ["small", "medium", "large", "x-large", "xx-large", "xxx-large"].includes(value);
 }
 
 const FontSizeToggle: React.FC = () => {
