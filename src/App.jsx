@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/custom.scss';
 
-import Navbar from './components/navbar/navbar';
+import NavbarComponent from './components/navbar/Navbar';
 import LandingPage from './pages/LandingPage';
 
 const App: React.FC = () => {
@@ -24,7 +24,7 @@ const App: React.FC = () => {
 
   return (
       <Container fluid className='App' style={{padding: "0", margin: "0", fontSize, fontFamily}}>
-        <Navbar />
+        <NavbarComponent />
         <LandingPage />
       </Container>
   );
