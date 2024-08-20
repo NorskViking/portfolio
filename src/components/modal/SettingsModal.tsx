@@ -2,7 +2,7 @@ import React from "react";
 import { Modal, Button } from "react-bootstrap";
 import FontSizeToggle from "../settings/FontSizeToggle";
 import FontFamilyToggle from "../settings/FontFamilyToggle";
-import ThemeToggleSwitch from "../settings/ThemeToggle";
+import ThemeToggleButton from "../settings/ThemeToggle";
 
 const SettingsModal: React.FC<{ show: boolean; handleClose: () => void }> = ({ show, handleClose }) => {
     return (
@@ -20,7 +20,7 @@ const SettingsModal: React.FC<{ show: boolean; handleClose: () => void }> = ({ s
             <Modal.Body>
                 <FontFamilyToggle />
                 <FontSizeToggle />
-                <ThemeToggleSwitch />
+                <ThemeToggleButton />
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleClose}>

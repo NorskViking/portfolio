@@ -5,6 +5,14 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/root";
 
+// Import Bootstrap components
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/utilities";
+
 // Dark Mode Palette
 $dark-nav-bg: #03045E;
 $dark-bg: #023E8A;
@@ -259,11 +267,3 @@ body {
 [data-font-family="Comfortaa"] {
     & body { font-family: map-get($font-families, 'Comfortaa'); }
 }
-
-// Import Bootstrap components
-@import "../../node_modules/bootstrap/scss/reboot";
-@import "../../node_modules/bootstrap/scss/type";
-@import "../../node_modules/bootstrap/scss/buttons";
-@import "../../node_modules/bootstrap/scss/forms";
-@import "../../node_modules/bootstrap/scss/grid";
-@import "../../node_modules/bootstrap/scss/utilities";
