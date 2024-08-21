@@ -106,10 +106,33 @@ $light-bg-gradient: linear-gradient(to bottom, $light-bg, lighten($light-bg, 10%
     color: var(--bs-body-color) !important;
 }
 
-.button-primary {
+.button-primary, .btn {
     background-color: var(--bs-btn-primary-bg) !important;
     border-color: var(--bs-btn-primary-border-color) !important;
     color: var(--bs-btn-primary-color) !important;
+    
+    padding: 0.5em 1em;
+    font-size: inherit;
+    border-radius: 0.25em;
+    border-width: 0.125em;
+}
+
+// Adjust button styles based on the theme
+[data-bs-theme="dark"] .btn,
+[data-bs-theme="light"] .btn {
+    background-color: var(--bs-btn-primary-bg);
+    border-color: var(--bs-btn-primary-border-color);
+    color: var(--bs-btn-primary-color);
+}
+
+.icon-link i {
+    font-size: 1.8em;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.2);
+    }
 }
 
 .tooltip-inner {
