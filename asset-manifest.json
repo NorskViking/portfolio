@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.d48498ad.css",
+    "main.js": "/portfolio/static/js/main.859cb48f.js",
+    "static/media/cartoon_it_glasses_guy.png": "/portfolio/static/media/cartoon_it_glasses_guy.c5ebc4bf4cdb647bf3a5.png",
+    "static/media/bootstrap-icons.woff?": "/portfolio/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/portfolio/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/Logo - DarkBlue.png": "/portfolio/static/media/Logo - DarkBlue.23b34931c7034aa5831b.png",
+    "static/media/Logo - LightBlue.png": "/portfolio/static/media/Logo - LightBlue.59887a36f2c2e8cd1025.png",
+    "index.html": "/portfolio/index.html",
+    "main.d48498ad.css.map": "/portfolio/static/css/main.d48498ad.css.map",
+    "main.859cb48f.js.map": "/portfolio/static/js/main.859cb48f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d48498ad.css",
+    "static/js/main.859cb48f.js"
+  ]
+}
