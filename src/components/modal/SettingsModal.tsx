@@ -11,6 +11,7 @@ const SettingsModal: React.FC<{ show: boolean; handleClose: () => void }> = ({ s
             onHide={handleClose}
             aria-labelledby="settingsModalLabel"
             dialogClassName="custom-modal"
+            contentClassName="custom-modal-content"
             >
             <Modal.Header closeButton>
                 <Modal.Title id="settingsModalLabel">

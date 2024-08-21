@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Image, Row, Col } from "react-bootstrap"
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "../styles/landingPage.css"
 import LandingPortrait from "../assets/png/cartoon_it_glasses_guy.png" 
 
 const LandingPage: React.FC = () => {
