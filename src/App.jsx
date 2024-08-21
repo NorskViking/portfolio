@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/custom.scss';
 
-import NavbarComponent from './components/navbar/Navbar';
+import NavbarComponent from './components/navbar/NavbarComponent';
 import LandingPage from './pages/LandingPage';
 
 const App: React.FC = () => {
