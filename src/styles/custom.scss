@@ -104,6 +104,9 @@ $light-bg-gradient: linear-gradient(to bottom, $light-bg, lighten($light-bg, 10%
 .card {
     background-color: var(--bs-card-bg) !important;
     color: var(--bs-body-color) !important;
+    border: 2px solid var(--bs-modal-border-color) !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin: 0.2em;
 }
 
 .button-primary, .btn {
