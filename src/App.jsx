@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Rootstate } from "./store/rootReducer"
 import Container from "react-bootstrap/Container";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/custom.scss';
+import './styles/_custom.scss';
 
 import NavbarComponent from './components/navbar/NavbarComponent';
 import LandingPage from './pages/LandingPage';

@@ -42,7 +42,8 @@ $light-bg-gradient: linear-gradient(to bottom, $light-bg, lighten($light-bg, 10%
     --bs-body-bg: #{$dark-bg-gradient};
     --bs-body-color: #{$dark-text};
     --bs-navbar-bg: #{$dark-nav-bg};
-    --bs-card-bg: #{$dark-primary};
+    --bs-card-bg: #{$dark-primary} !important;
+    --bs-card-cap-bg: #{dark-primary} !important;
     --bs-logo-bg: #($logo-bg-dark);
     --bs-modal-bg: #{$dark-secondary};
     --bs-modal-color: #{$dark-text};
@@ -68,7 +69,8 @@ $light-bg-gradient: linear-gradient(to bottom, $light-bg, lighten($light-bg, 10%
     --bs-body-bg: #{$light-bg-gradient};
     --bs-body-color: #{$light-text};
     --bs-navbar-bg: #{$light-nav-bg};
-    --bs-card-bg: #{$light-primary};
+    --bs-card-bg: #{light-primary} !important;
+    --bs-card-cap-bg: #{light-primary} !important;
     --bs-logo-bg: #($logo-bg-light);
     --bs-modal-bg: #{$light-secondary};
     --bs-modal-color: #{$light-text};
@@ -94,7 +96,7 @@ $light-bg-gradient: linear-gradient(to bottom, $light-bg, lighten($light-bg, 10%
 .modal-content {
     background-color: var(--bs-modal-bg) !important;
     color: var(--bs-modal-color) !important;
-    opacity: 100 !important;
+    opacity: 1 !important;
     z-index: 100;
     border: 1px solid var(--bs-modal-border-color) !important;
     background-clip: padding-box;
@@ -107,14 +109,18 @@ $light-bg-gradient: linear-gradient(to bottom, $light-bg, lighten($light-bg, 10%
 
 .card {
     background-color: var(--bs-card-bg) !important;
+    background-color: var(--bs-card-bg);
+    --bs-card-cap-bg: var(var(--bs-card-bg)) !important;
     color: var(--bs-body-color) !important;
-    border: 2px solid var(--bs-modal-border-color) !important;
+    opacity: 1;
+    border: 1px solid var(--bs-modal-border-color) !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     margin: 0.2em;
 }
 
 .card-logo-container {
     background-color: var(--bs-logo-bg) !important;
+    opacity: 1 !important;
     display: flex;
     height: 5.2em;
     width: auto;

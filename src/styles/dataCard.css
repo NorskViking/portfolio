@@ -1,0 +1,27 @@
+.data-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.data-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+.data-card .data-card-logo {
+  height: 5em;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 1em auto;
+}
+.data-card .card-title {
+  font-weight: 700;
+  font-size: 1.25em;
+}
+.data-card .card-subtitle {
+  font-size: 0.9em;
+  margin-bottom: 0.5rem;
+}
+.data-card .card-text {
+  font-size: 1em;
+}/*# sourceMappingURL=dataCard.css.map */
