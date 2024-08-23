@@ -8902,6 +8902,7 @@ progress {
   --bs-card-custom-bg: #0077B6;
   --bs-card-color: #FFFFFF;
   --bs-card-custom-border-color: #495057;
+  --bs-logo-custom-bg: lighten(#2C2C2C, 10%);
   --bs-container-bg: #023E8A;
   --bs-container-color: #FFFFFF;
   --bs-dropdown-bg: #0077B6;
@@ -8949,6 +8950,7 @@ progress {
   --bs-card-custom-bg: #ADE8F4;
   --bs-card-color: #000000;
   --bs-card-custom-border-color: #DEE2E6;
+  --bs-logo-custom-bg: darken(#F0F0F0, 10%);
   --bs-container-bg: #CAF0F8;
   --bs-container-color: #000000;
   --bs-dropdown-bg: #ADE8F4;
@@ -9005,10 +9007,31 @@ progress {
   border-color: var(--bs-btn-hover-border-color);
 }
 
+[data-bs-theme=dark] .btn,
+[data-bs-theme=light] .btn {
+  background-color: var(--bs-btn-primary-bg);
+  border-color: var(--bs-btn-primary-border-color);
+  color: var(--bs-btn-primary-color);
+}
+
 .card {
   background-color: var(--bs-card-custom-bg);
   color: var(--bs-card-color);
   border: 1px solid var(--bs-card-custom-border-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  margin: 0.2em;
+}
+
+.card-logo-container {
+  display: flex;
+  height: 5.2em;
+  width: auto;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+  justify-content: center;
+  align-items: center;
+  margin: 0.25em;
+  padding: 0.25em;
 }
 
 .container {

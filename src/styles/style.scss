@@ -77,6 +77,7 @@ $logo-bg-light: #F0F0F0;
     --bs-card-custom-bg: #{$dark-primary};
     --bs-card-color: #{$dark-text};
     --bs-card-custom-border-color: #{$dark-border};
+    --bs-logo-custom-bg: lighten(#{$logo-bg-dark}, 10%);
 
     // Container
     --bs-container-bg: #{$dark-bg};
@@ -149,6 +150,7 @@ $logo-bg-light: #F0F0F0;
     --bs-card-custom-bg: #{$light-primary};
     --bs-card-color: #{$light-text};
     --bs-card-custom-border-color: #{$light-border};
+    --bs-logo-custom-bg: darken(#{$logo-bg-light}, 10%);
 
     // Container
     --bs-container-bg: #{$light-bg};
@@ -227,11 +229,32 @@ $logo-bg-light: #F0F0F0;
     }
 }
 
+// Adjust button styles based on the theme
+[data-bs-theme="dark"] .btn,
+[data-bs-theme="light"] .btn {
+    background-color: var(--bs-btn-primary-bg);
+    border-color: var(--bs-btn-primary-border-color);
+    color: var(--bs-btn-primary-color);
+}
+
 // Card
 .card {
     background-color: var(--bs-card-custom-bg);
     color: var(--bs-card-color);
     border: 1px solid var(--bs-card-custom-border-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin: 0.2em;
+}
+
+.card-logo-container {
+    display: flex;
+    height: 5.2em;
+    width: auto;
+    object-fit: contain !important;
+    justify-content: center;
+    align-items: center;
+    margin: 0.25em;
+    padding: 0.25em;
 }
 
 // Container
