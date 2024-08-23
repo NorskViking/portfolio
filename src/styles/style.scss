@@ -1,0 +1,312 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/progress";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/utilities";
+
+@import "../../node_modules/bootstrap/scss/utilities/api";
+
+// Dark Mode Palette
+$dark-nav-bg: #03045E;
+$dark-bg: #023E8A;
+$dark-primary: #0077B6;
+$dark-secondary: #0096C7;
+$dark-tertiary: #00B4D8;
+$dark-accent: #80D4FF;
+$dark-text: #FFFFFF;
+$dark-success: #00A676;
+$dark-warning: #FFB703;
+$dark-danger: #EF233C;
+$dark-info: #4CC9F0;
+$dark-muted: #6C757D;
+$dark-border: #495057;
+$logo-bg-dark: #2C2C2C;
+
+// Light Mode Palette
+$light-nav-bg: #00B4D8;
+$light-bg: #CAF0F8;
+$light-primary: #ADE8F4;
+$light-secondary: #90E0EF;
+$light-tertiary: #48CAE4;
+$light-accent: #0077B6;
+$light-text: #000000;
+$light-success: #38A169;
+$light-warning: #FFC107;
+$light-danger: #E63946;
+$light-info: #219EBC;
+$light-muted: #6C757D;
+$light-border: #DEE2E6;
+$logo-bg-light: #F0F0F0;
+
+// Dark Mode
+[data-bs-theme="dark"] {
+    --bs-body-bg: #{$dark-bg};
+    --bs-body-color: #{$dark-text};
+    --bs-border-color: #{$dark-border};
+
+    // Navbar
+    --bs-navbar-bg: #{$dark-nav-bg};
+    --bs-navbar-color: #{$dark-text};
+    --bs-navbar-brand-color: #{$dark-accent};
+    --bs-navbar-nav-link-color: #{$dark-text};
+    --bs-navbar-nav-link-hover-color: lighten(#{$dark-accent}, 10%);
+
+    // Button
+    --bs-btn-bg: #{$dark-primary};
+    --bs-btn-border-color: #{$dark-secondary};
+    --bs-btn-color: #{$dark-text};
+    --bs-btn-hover-bg: darken(#{$dark-primary}, 10%);
+    --bs-btn-hover-border-color: darken(#{$dark-secondary}, 10%);
+
+    // Card
+    --bs-card-custom-bg: #{$dark-primary};
+    --bs-card-color: #{$dark-text};
+    --bs-card-custom-border-color: #{$dark-border};
+
+    // Container
+    --bs-container-bg: #{$dark-bg};
+    --bs-container-color: #{$dark-text};
+
+    // Dropdown
+    --bs-dropdown-bg: #{$dark-primary};
+    --bs-dropdown-color: #{$dark-text};
+    --bs-dropdown-border-color: #{$dark-border};
+
+    // Form
+    --bs-form-bg: #{$dark-bg};
+    --bs-form-color: #{$dark-text};
+    --bs-input-bg: #{$dark-secondary};
+    --bs-input-border-color: #{$dark-border};
+    --bs-input-color: #{$dark-text};
+    --bs-input-placeholder-color: #{$dark-muted};
+
+    // Modal
+    --bs-modal-custom-bg: #{$dark-secondary};
+    --bs-modal-color: #{$dark-text};
+    --bs-modal-custom-border-color: #{$dark-border};
+
+    // Progress Bar
+    --bs-progress-bg: #{$dark-muted};
+    --bs-progress-bar-bg: #{$dark-primary};
+
+    // Typography
+    --bs-heading-color: #{$dark-text};
+    --bs-text-color: #{$dark-text};
+    --bs-muted-color: #{$dark-muted};
+
+    // Link
+    --bs-link-color: #{$dark-accent};
+    --bs-link-hover-color: lighten(#{$dark-accent}, 10%);
+    --bs-link-hover-decoration: underline;
+
+    // Tooltip
+    --bs-tooltip-bg: darken(#{$dark-primary}, 10%);
+    --bs-tooltip-color: #{$dark-text};
+
+    // Table
+    --bs-table-bg: #{$dark-primary};
+    --bs-table-color: #{$dark-text};
+    --bs-table-border-color: #{$dark-border};
+    --bs-table-hover-bg: darken(#{$dark-primary}, 10%);
+}
+
+  // Light Mode
+[data-bs-theme="light"] {
+    --bs-body-bg: #{$light-bg};
+    --bs-body-color: #{$light-text};
+    --bs-border-color: #{$light-border};
+
+    // Navbar
+    --bs-navbar-bg: #{$light-nav-bg};
+    --bs-navbar-color: #{$light-text};
+    --bs-navbar-brand-color: #{$light-accent};
+    --bs-navbar-nav-link-color: #{$light-text};
+    --bs-navbar-nav-link-hover-color: darken(#{$light-accent}, 10%);
+
+    // Button
+    --bs-btn-bg: #{$light-primary};
+    --bs-btn-border-color: #{$light-secondary};
+    --bs-btn-color: #{$light-text};
+    --bs-btn-hover-bg: darken(#{$light-primary}, 10%);
+    --bs-btn-hover-border-color: darken(#{$light-secondary}, 10%);
+
+    // Card
+    --bs-card-custom-bg: #{$light-primary};
+    --bs-card-color: #{$light-text};
+    --bs-card-custom-border-color: #{$light-border};
+
+    // Container
+    --bs-container-bg: #{$light-bg};
+    --bs-container-color: #{$light-text};
+
+    // Dropdown
+    --bs-dropdown-bg: #{$light-primary};
+    --bs-dropdown-color: #{$light-text};
+    --bs-dropdown-border-color: #{$light-border};
+
+    // Form
+    --bs-form-bg: #{$light-bg};
+    --bs-form-color: #{$light-text};
+    --bs-input-bg: #{$light-secondary};
+    --bs-input-border-color: #{$light-border};
+    --bs-input-color: #{$light-text};
+    --bs-input-placeholder-color: #{$light-muted};
+
+    // Modal
+    --bs-modal-custom-bg: #{$light-secondary};
+    --bs-modal-color: #{$light-text};
+    --bs-modal-custom-border-color: #{$light-border};
+
+    // Progress Bar
+    --bs-progress-bg: #{$light-muted};
+    --bs-progress-bar-bg: #{$light-primary};
+
+    // Typography
+    --bs-heading-color: #{$light-text};
+    --bs-text-color: #{$light-text};
+    --bs-muted-color: #{$light-muted};
+
+    // Link
+    --bs-link-color: #{$light-accent};
+    --bs-link-hover-color: darken(#{$light-accent}, 10%);
+    --bs-link-hover-decoration: underline;
+
+    // Tooltip
+    --bs-tooltip-bg: darken(#{$light-primary}, 10%);
+    --bs-tooltip-color: #{$light-text};
+
+    // Table
+    --bs-table-bg: #{$light-primary};
+    --bs-table-color: #{$light-text};
+    --bs-table-border-color: #{$light-border};
+    --bs-table-hover-bg: darken(#{$light-primary}, 10%);
+}
+
+// Navbar
+.navbar {
+    background-color: var(--bs-navbar-bg);
+    color: var(--bs-navbar-color);
+}
+
+.navbar-brand {
+    color: var(--bs-navbar-brand-color);
+}
+
+.navbar-nav .nav-link {
+    color: var(--bs-navbar-nav-link-color);
+    
+    &:hover {
+        color: var(--bs-navbar-nav-link-hover-color);
+    }
+}
+
+// Buttons
+.btn {
+    background-color: var(--bs-btn-bg);
+    border-color: var(--bs-btn-border-color);
+    color: var(--bs-btn-color);
+
+    &:hover {
+        background-color: var(--bs-btn-hover-bg);
+        border-color: var(--bs-btn-hover-border-color);
+    }
+}
+
+// Card
+.card {
+    background-color: var(--bs-card-custom-bg);
+    color: var(--bs-card-color);
+    border: 1px solid var(--bs-card-custom-border-color);
+}
+
+// Container
+.container {
+    background-color: var(--bs-container-bg);
+    color: var(--bs-container-color);
+}
+
+// Dropdown
+.dropdown-menu {
+    background-color: var(--bs-dropdown-bg);
+    color: var(--bs-dropdown-color);
+    border: 1px solid var(--bs-dropdown-border-color);
+}
+
+// Links
+a {
+    color: var(--bs-link-color);
+    text-decoration: none;
+    
+    &:hover {
+        color: var(--bs-link-hover-color);
+        text-decoration: var(--bs-link-hover-decoration);
+    }
+}
+
+// Inputs
+.form-control {
+    background-color: var(--bs-input-bg);
+    border-color: var(--bs-input-border-color);
+    color: var(--bs-input-color);
+    
+    &::placeholder {
+        color: var(--bs-input-placeholder-color);
+    }
+}
+
+// Modal
+.modal-content {
+    background-color: var(--bs-modal-custom-bg);
+    color: var(--bs-modal-color);
+    border: 1px solid var(--bs-modal-border-custom-color);
+}
+
+// Progress bar
+.progress-bar {
+    background-color: var(--bs-progress-bar-bg);
+}
+
+// Tables
+.table {
+    background-color: var(--bs-table-bg);
+    color: var(--bs-table-color);
+    border-color: var(--bs-table-border-color);
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--bs-table-hover-bg);
+}
+
+// Tooltips
+.tooltip-inner {
+    background-color: var(--bs-tooltip-bg);
+    color: var(--bs-tooltip-color);
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+    color: var(--bs-heading-color);
+}
+
+p, span, div {
+    color: var(--bs-text-color);
+}
+
+.text-muted {
+    color: var(--bs-muted-color);
+}
