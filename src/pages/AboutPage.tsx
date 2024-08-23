@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Image, Row, Col, Card } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 import { educationData, workData, volunteerData } from "../data/aboutData";
 import DataCard from "../components/cards/DataCard";
 
