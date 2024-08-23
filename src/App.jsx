@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { Rootstate } from "./store/rootReducer"
-import Container from "react-bootstrap/Container";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/_custom.scss';
+import "./styles/style.scss";
+
+//import './styles/_custom.scss';
+import { Rootstate } from "./store/rootReducer"
+import { useSelector } from 'react-redux';
+import Container from "react-bootstrap/Container";
 
 import NavbarComponent from './components/navbar/NavbarComponent';
 import LandingPage from './pages/LandingPage';

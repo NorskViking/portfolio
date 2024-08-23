@@ -3,6 +3,7 @@ import { Modal, Button } from "react-bootstrap";
 import FontSizeToggle from "../settings/FontSizeToggle";
 import FontFamilyToggle from "../settings/FontFamilyToggle";
 import ThemeToggleButton from "../settings/ThemeToggle";
+//import "../../styles/modal.scss"
 
 const SettingsModal: React.FC<{ show: boolean; handleClose: () => void }> = ({ show, handleClose }) => {
     return (
