@@ -199,6 +199,126 @@ $logo-bg-light: #F0F0F0;
     --bs-table-hover-bg: darken(#{$light-primary}, 10%);
 }
 
+// Font families
+$font-families: (
+    'Open Sans': 'Open Sans, sans-serif',
+    'Kosugi Maru': 'Kosugi Maru, sans-serif',
+    'Merriweather Sans': 'Merriweather Sans, sans-serif',
+    'Oxygen': 'Oxygen, sans-serif',
+    'Barlow Semi Condensed': 'Barlow Semi Condensed, sans-serif',
+    'Quicksand': 'Quicksand, sans-serif',
+    'Work Sans': 'Work Sans, sans-serif',
+    'Concert One': 'Concert One, sans-serif'
+);
+
+// Adding custom google-fonts
+[data-font-family="Open Sans"] {
+    & body { font-family: map-get($font-families, 'Open Sans'); }
+}
+[data-font-family="Kosugi Maru"] {
+    & body { font-family: map-get($font-families, 'Kosugi Maru'); }
+}
+[data-font-family="Merriweather Sans"] {
+    & body { font-family: map-get($font-families, 'Merriweather Sans'); }
+}
+[data-font-family="Oxygen"] {
+    & body { font-family: map-get($font-families, 'Oxygen'); }
+}
+[data-font-family="Barlow Semi Condensed"] {
+    & body { font-family: map-get($font-families, 'Barlow Semi Condensed'); }
+}
+[data-font-family="Quicksand"] {
+    & body { font-family: map-get($font-families, 'Quicksand'); }
+}
+[data-font-family="Work Sans"] {
+    & body { font-family: map-get($font-families, 'Work Sans'); }
+}
+[data-font-family="Concert One"] {
+    & body { font-family: map-get($font-families, 'Concert One'); }
+}
+
+// Adding custom font-sizes
+[data-font-size="small"] {
+    body {
+        font-size: 0.8rem;
+    }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.4rem; }
+    h4 { font-size: 1.2rem; }
+    h5 { font-size: 1rem; }
+    h6 { font-size: 0.8rem; }
+}
+
+[data-font-size="medium"] {
+    body {
+        font-size: 1rem;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+    h5 { font-size: 1.125rem; }
+    h6 { font-size: 1rem; }
+}
+
+[data-font-size="large"] {
+    body {
+        font-size: 1.2rem;
+    }
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+    h4 { font-size: 1.5rem; }
+    h5 { font-size: 1.3rem; }
+    h6 { font-size: 1.1rem; }
+}
+
+[data-font-size="x-large"] {
+    body {
+        font-size: 1.4rem;
+    }
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 2.2rem; }
+    h3 { font-size: 2rem; }
+    h4 { font-size: 1.75rem; }
+    h5 { font-size: 1.5rem; }
+    h6 { font-size: 1.2rem; }
+}
+
+[data-font-size="xx-large"] {
+    body {
+        font-size: 1.6rem;
+    }
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 2.4rem; }
+    h3 { font-size: 2.2rem; }
+    h4 { font-size: 2rem; }
+    h5 { font-size: 1.75rem; }
+    h6 { font-size: 1.3rem; }
+}
+
+[data-font-size="xxx-large"] {
+    body {
+        font-size: 1.8rem;
+    }
+    p { font-size: 1.8rem; }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.6rem; }
+    h3 { font-size: 2.4rem; }
+    h4 { font-size: 2.2rem; }
+    h5 { font-size: 2rem; }
+    h6 { font-size: 1.4rem; }
+}
+
+// Font size and family utility classes
+body {
+    font-size: map-get($font-sizes, medium);
+    font-family: map-get($font-families, 'Open Sans');
+    background: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
 // Navbar
 .navbar {
     background-color: var(--bs-navbar-bg);
@@ -278,6 +398,16 @@ a {
     &:hover {
         color: var(--bs-link-hover-color);
         text-decoration: var(--bs-link-hover-decoration);
+    }
+}
+
+.icon-link i {
+    font-size: 1.8em;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.2);
     }
 }
 

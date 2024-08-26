@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import SettingsModal from "../modal/SettingsModal";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "./settingsButton.css";
+import "../../styles/settingsButton.css";
 
 const SettingsButton: React.FC = () => {
     const [showModal, toggleShowModal] = useState(false);
