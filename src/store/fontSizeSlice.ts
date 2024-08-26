@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 // Defining possible font size values
-export type FontSize = "small" | "medium" | "large" | "x-large" | "xx-large"; 
+export type FontSize = "small" | "medium" | "large" | "x-large" | "xx-large" | "xxx-large"; 
 
 interface FontSizeState {
     fontSize: FontSize;
@@ -14,7 +14,8 @@ const getFontSizeFromLocalStorage = (): FontSize => {
         storedSize ==="medium" || 
         storedSize === "large" ||
         storedSize === "x-large" ||
-        storedSize === "xx-large") {
+        storedSize === "xx-large" ||
+        storedSize === "xxx-large") {
         return storedSize;
     }
     return "medium"; // Default value
