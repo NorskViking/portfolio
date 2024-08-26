@@ -8981,6 +8981,179 @@ progress {
   --bs-table-hover-bg: darken(#ADE8F4, 10%);
 }
 
+[data-font-family="Open Sans"] body {
+  font-family: "Open Sans, sans-serif";
+}
+
+[data-font-family="Kosugi Maru"] body {
+  font-family: "Kosugi Maru, sans-serif";
+}
+
+[data-font-family="Merriweather Sans"] body {
+  font-family: "Merriweather Sans, sans-serif";
+}
+
+[data-font-family=Oxygen] body {
+  font-family: "Oxygen, sans-serif";
+}
+
+[data-font-family="Barlow Semi Condensed"] body {
+  font-family: "Barlow Semi Condensed, sans-serif";
+}
+
+[data-font-family=Quicksand] body {
+  font-family: "Quicksand, sans-serif";
+}
+
+[data-font-family="Work Sans"] body {
+  font-family: "Work Sans, sans-serif";
+}
+
+[data-font-family="Concert One"] body {
+  font-family: "Concert One, sans-serif";
+}
+
+[data-font-size=small] body {
+  font-size: 0.8rem;
+}
+[data-font-size=small] h1, [data-font-size=small] .h1 {
+  font-size: 1.8rem;
+}
+[data-font-size=small] h2, [data-font-size=small] .h2 {
+  font-size: 1.6rem;
+}
+[data-font-size=small] h3, [data-font-size=small] .h3 {
+  font-size: 1.4rem;
+}
+[data-font-size=small] h4, [data-font-size=small] .h4 {
+  font-size: 1.2rem;
+}
+[data-font-size=small] h5, [data-font-size=small] .h5 {
+  font-size: 1rem;
+}
+[data-font-size=small] h6, [data-font-size=small] .h6 {
+  font-size: 0.8rem;
+}
+
+[data-font-size=medium] body {
+  font-size: 1rem;
+}
+[data-font-size=medium] h1, [data-font-size=medium] .h1 {
+  font-size: 2rem;
+}
+[data-font-size=medium] h2, [data-font-size=medium] .h2 {
+  font-size: 1.75rem;
+}
+[data-font-size=medium] h3, [data-font-size=medium] .h3 {
+  font-size: 1.5rem;
+}
+[data-font-size=medium] h4, [data-font-size=medium] .h4 {
+  font-size: 1.25rem;
+}
+[data-font-size=medium] h5, [data-font-size=medium] .h5 {
+  font-size: 1.125rem;
+}
+[data-font-size=medium] h6, [data-font-size=medium] .h6 {
+  font-size: 1rem;
+}
+
+[data-font-size=large] body {
+  font-size: 1.2rem;
+}
+[data-font-size=large] h1, [data-font-size=large] .h1 {
+  font-size: 2.2rem;
+}
+[data-font-size=large] h2, [data-font-size=large] .h2 {
+  font-size: 2rem;
+}
+[data-font-size=large] h3, [data-font-size=large] .h3 {
+  font-size: 1.75rem;
+}
+[data-font-size=large] h4, [data-font-size=large] .h4 {
+  font-size: 1.5rem;
+}
+[data-font-size=large] h5, [data-font-size=large] .h5 {
+  font-size: 1.3rem;
+}
+[data-font-size=large] h6, [data-font-size=large] .h6 {
+  font-size: 1.1rem;
+}
+
+[data-font-size=x-large] body {
+  font-size: 1.4rem;
+}
+[data-font-size=x-large] h1, [data-font-size=x-large] .h1 {
+  font-size: 2.4rem;
+}
+[data-font-size=x-large] h2, [data-font-size=x-large] .h2 {
+  font-size: 2.2rem;
+}
+[data-font-size=x-large] h3, [data-font-size=x-large] .h3 {
+  font-size: 2rem;
+}
+[data-font-size=x-large] h4, [data-font-size=x-large] .h4 {
+  font-size: 1.75rem;
+}
+[data-font-size=x-large] h5, [data-font-size=x-large] .h5 {
+  font-size: 1.5rem;
+}
+[data-font-size=x-large] h6, [data-font-size=x-large] .h6 {
+  font-size: 1.2rem;
+}
+
+[data-font-size=xx-large] body {
+  font-size: 1.6rem;
+}
+[data-font-size=xx-large] h1, [data-font-size=xx-large] .h1 {
+  font-size: 2.6rem;
+}
+[data-font-size=xx-large] h2, [data-font-size=xx-large] .h2 {
+  font-size: 2.4rem;
+}
+[data-font-size=xx-large] h3, [data-font-size=xx-large] .h3 {
+  font-size: 2.2rem;
+}
+[data-font-size=xx-large] h4, [data-font-size=xx-large] .h4 {
+  font-size: 2rem;
+}
+[data-font-size=xx-large] h5, [data-font-size=xx-large] .h5 {
+  font-size: 1.75rem;
+}
+[data-font-size=xx-large] h6, [data-font-size=xx-large] .h6 {
+  font-size: 1.3rem;
+}
+
+[data-font-size=xxx-large] body {
+  font-size: 1.8rem;
+}
+[data-font-size=xxx-large] p {
+  font-size: 1.8rem;
+}
+[data-font-size=xxx-large] h1, [data-font-size=xxx-large] .h1 {
+  font-size: 2.8rem;
+}
+[data-font-size=xxx-large] h2, [data-font-size=xxx-large] .h2 {
+  font-size: 2.6rem;
+}
+[data-font-size=xxx-large] h3, [data-font-size=xxx-large] .h3 {
+  font-size: 2.4rem;
+}
+[data-font-size=xxx-large] h4, [data-font-size=xxx-large] .h4 {
+  font-size: 2.2rem;
+}
+[data-font-size=xxx-large] h5, [data-font-size=xxx-large] .h5 {
+  font-size: 2rem;
+}
+[data-font-size=xxx-large] h6, [data-font-size=xxx-large] .h6 {
+  font-size: 1.4rem;
+}
+
+body {
+  font-family: "Open Sans, sans-serif";
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
 .navbar {
   background-color: var(--bs-navbar-bg);
   color: var(--bs-navbar-color);
@@ -9053,6 +9226,14 @@ a:hover {
   color: var(--bs-link-hover-color);
   -webkit-text-decoration: var(--bs-link-hover-decoration);
           text-decoration: var(--bs-link-hover-decoration);
+}
+
+.icon-link i {
+  font-size: 1.8em;
+  transition: transform 0.2s ease-in-out;
+}
+.icon-link i:hover, .icon-link i:focus {
+  transform: scale(1.2);
 }
 
 .form-control {
