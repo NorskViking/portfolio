@@ -10,6 +10,7 @@ import Container from "react-bootstrap/Container";
 import NavbarComponent from './components/navbar/NavbarComponent';
 import LandingPage from './pages/LandingPage';
 import About from './pages/AboutPage';
+import Projects from './pages/ProjectsPage';
 
 const App: React.FC = () => {
   const isDarkMode = useSelector((state: Rootstate) => state.theme.isDarkMode);
@@ -30,6 +31,7 @@ const App: React.FC = () => {
         <NavbarComponent />
         <LandingPage />
         <About />
+        <Projects />
       </Container>
   );
 }

@@ -1,3 +1,7 @@
+import rps from "../assets/png/logo_rock_paper_scissors.png";
+import codecademy from "../assets/png/logo_codecademy.png";
+//import raskeladden from "..assets/png/lo";
+
 interface project {
     id: number;
     title: string;
@@ -5,10 +9,10 @@ interface project {
     tags: string[];
     code: string;
     demo: string;
-    logo?: void;
+    logo: string;
 }
 
-export const porjectData: project[] = [
+export const projectData: project[] = [
     {
         id: 1,
         title: "Raskeladden & Dovreslubben",
@@ -16,6 +20,7 @@ export const porjectData: project[] = [
         tags: ['Github', 'Godot', 'Asana'],
         code: "https://github.com/FunkWeb/spill6",
         demo: "https://funksoft.no/raskeladden/Raskeladden.og.Dovreslubben.html",
+        logo: rps
     },
     {
         id: 2,
@@ -24,6 +29,7 @@ export const porjectData: project[] = [
         tags: ['HTML', 'CSS', 'JavaScript'],
         code: "https://github.com/NorskViking/CodeCademy--Full-stack-Engineer--Course",
         demo: "https://www.codecademy.com/learn/paths/full-stack-engineer-career-path",
+        logo: codecademy
     },
     {
         id: 3,
@@ -32,5 +38,6 @@ export const porjectData: project[] = [
         tags: ["React", "TailwindCSS", "Typescript"],
         code: "https://github.com/NorskViking/rock-paper-scissors-master",
         demo: "https://norskviking.github.io/rock-paper-scissors-master/",
+        logo: rps
     }
 ]
