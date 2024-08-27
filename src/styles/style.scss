@@ -323,10 +323,17 @@ body {
 .navbar {
     background-color: var(--bs-navbar-bg);
     color: var(--bs-navbar-color);
+    height: 4em;
 }
 
 .navbar-brand {
     color: var(--bs-navbar-brand-color);
+    object-fit: contain;
+    height: 3.8em;
+}
+
+.navbar-brand .navbar-logo {
+    max-height: 90%;
 }
 
 .navbar-nav .nav-link {

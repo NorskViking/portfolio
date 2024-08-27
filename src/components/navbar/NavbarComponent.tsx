@@ -27,16 +27,14 @@ function NavbarComponent() {
             sticky="top"
             id="navbar"
             role="navigation"
-            style={{height: "4rem"}}
             aria-current="page"
         >
             <Container fluid className="justify-content-between mx-auto">
                 <Navbar.Brand className="justify-content-start">
                     <Image
+                        className="navbar-logo"
                         src={logo}
-                        alt="navbar logo image, with the text: Jørgen Baumann." 
-                        width={70}
-                        height={70}
+                        alt="navbar logo image, with the text: Jørgen Baumann."
                         aria-label="Jørgen Baumann Logo"
                     />
                 </Navbar.Brand>
