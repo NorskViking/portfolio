@@ -1,14 +1,25 @@
 import React, { useState } from "react";
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Button, OverlayTrigger, Tooltip } from "react-bootstrap";
 
-interface IconLinkProps {
-    href: string;
+interface IconButtonProps {
+    href?: string;
     iconStandard: string;
     iconHover: string;
-    title: string;
+    title?: string;
+    variant?: string;
+    onClick?: () => void;
+    ariaLabel?: string;
 }
 
-const IconLink: React.FC<IconLinkProps> = ({ href, iconStandard, iconHover, title }) => {
+const IconButton: React.FC<IconButtonProps> = ({
+        href, 
+        iconStandard, 
+        iconHover,
+        title,
+        variant = 'primary',
+        onClick,
+        ariaLabel,
+    }) => {
     const [isACtive, setIsActive] = useState(false);
 
     const handleMouseEnter = () => setIsActive(true);
@@ -21,21 +32,30 @@ const IconLink: React.FC<IconLinkProps> = ({ href, iconStandard, iconHover, titl
             placement="top"
             overlay={<Tooltip id={`tooltip-${title}`}>{title}</Tooltip>}
         >
-            <a
+            <Button
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`${title}`}
+                aria-label={ariaLabel}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
-                style={{ position: "relative", display: "inline-block", textDecoration: "none", color: "inherit" }}
+                onClick={onClick}
+                variant={variant}
+                style={{ 
+                    position: "relative",
+                    display: "inline-block",
+                    textDecoration: "none",
+                    color: "inherit",
+                    fontSize: "1.8em",
+                    border: "none"
+                }}
             >
                 <i className={isACtive ? iconHover : iconStandard}></i>
-            </a>
+            </Button>
         </OverlayTrigger>
     )
 }
 
-export default IconLink;
+export default IconButton;

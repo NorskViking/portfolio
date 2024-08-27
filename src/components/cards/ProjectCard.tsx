@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Container, Row } from "react-bootstrap";
-import IconLink from "../buttons/IconLink";
+import { Card, Container, Badge } from "react-bootstrap";
+import IconButton from "../buttons/IconButton";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 interface ProjectCardProps {
@@ -35,25 +35,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, tags,
                     {description}
                 </Card.Text>
             </Card.Body>
-            <Card.Footer className="justify-content-space-between">
-                <p>  
-                    <IconLink 
-                        href={code}
-                        iconStandard="bi bi-file-code"
-                        iconHover="bi bi-file-code-fill"
-                        title={`${title} - github project folder`}
-                    />
-                    Code
-                </p>
-                <p>
-                    <IconLink 
-                        href={demo}
-                        iconStandard="bi bi-file-play"
-                        iconHover="bi bi-file-play-fill"
-                        title={`${title} - demo page`}
-                    />
-                    Demo
-                </p>
+            <Card.Footer className="d-flex justify-content-between p-2 text-center">
+                <IconButton
+                    href={code}
+                    iconStandard="bi bi-file-code"
+                    iconHover="bi bi-file-code-fill"
+                    title={`${title} - github project folder`}
+                />
+                <IconButton 
+                    href={demo}
+                    iconStandard="bi bi-file-play"
+                    iconHover="bi bi-file-play-fill"
+                    title={`${title} - demo page`}
+                />
             </Card.Footer>
         </Card>
     )
