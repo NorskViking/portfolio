@@ -87,48 +87,48 @@ export const volunteerData: data[] = [
     {
         id: 1,
         title: "Cybernetisk Selskab, Universitetet i Oslo",
-        description: "",
-        startDate: "",
-        endDate: "",
+        description: "I min tid som frivillig i CYB, jobbet jeg i student kaffeen og baren, og var i en periode valgt inn som Kafèsjef og Barsjef.",
+        startDate: "2011",
+        endDate: "2018",
         logo: cyb
     },
     {
         id: 2,
         title: "Realistforeningen, Universitetet i Oslo",
-        description: "",
-        startDate: "",
-        endDate: "",
+        description: "I min tid som frivillig i RF, jobbet jeg som bartender i studentbaren.",
+        startDate: "2012",
+        endDate: "2018",
         logo: rf
     },
     {
         id: 3,
         title: "Tappetårnet, Universitetet i Oslo",
-        description: "",
-        startDate: "",
-        endDate: "",
+        description: "I min tid som frivillig i TT, jobbet jeg som bartender, og hadde de siste par årene rolle som Baransvarlig.",
+        startDate: "2014",
+        endDate: "2018",
         logo: tt
     },
     {
         id: 4,
         title: "Kristiania Studentenes Haandbryggerlaug, Universitetet i Oslo",
-        description: "",
-        startDate: "",
-        endDate: "",
+        description: "I min tid som frivillig i KSHB, deltok jeg på kurs i hjemmebrygging, og avholdt ølsmakinger for gjester.",
+        startDate: "2012",
+        endDate: "2016",
         logo: kshb
     },
     {
         id: 5,
         title: "Pre-Prod",
         company: "Midgardsblot Metal Festival",
-        description: "",
+        description: "Som en del av Pre-Prod, jobbet jeg hovedsakelig med å gjøre klar festivalområde i forveien av selve festivalen.",
         year: 2022,
         logo: midgardsblot
     },
     {
         id: 6,
         title: "Environment",
-        company: "Tons of Rock Festival 2023",
-        description: "",
+        company: "Tons of Rock Festival",
+        description: "Som en del av miljøgruppen, bidro jeg med å holde festivalområdet ryddig, håndterte og transporterte avfall.",
         year: 2023,
         logo: tonsOfRock
     },
@@ -136,23 +136,23 @@ export const volunteerData: data[] = [
         id: 7,
         title: "DeltaForce",
         company: "Midgardsblot Metal Festival",
-        description: "",
+        description: "Som en del av DeltaForce, bidro jeg med arbeidsoppgaver relatert til frivillig-campen. Dette gikk ut på å hjelpe frivillige med å registrere og finne teltplass, og holde området ryddig og organisert.",
         year: 2023,
         logo: midgardsblot
     },
     {
         id: 8,
         title: "Pit-Crew",
-        company: "Inferno Metal Festival 2024",
-        description: "",
+        company: "Inferno Metal Festival",
+        description: "Som en del av Pit-Crew, bidro jeg vektere med ekstra sikkerhet rundt hovedscenen under selve festivalen.",
         year: 2024,
         logo: inferno
     },
     {
         id: 9,
         title: "Pit-Crew",
-        company: "Tons of Rock Festival 2024",
-        description: "",
+        company: "Tons of Rock Festival",
+        description: "Som en del av Pit-Crew, bidro jeg vektere med ekstra sikkerhet rundt hovedscenen under selve festivalen.",
         year: 2024,
         logo: tonsOfRock
     },
@@ -160,7 +160,7 @@ export const volunteerData: data[] = [
         id: 10,
         title: "DeltaForce",
         company: "Midgardsblot Metal Festival",
-        description: "",
+        description: "Som en del av DeltaForce, jobbet jeg hovedsakelig med rigging av festivalområde i forveien av selve festivalen.",
         year: 2024,
         logo: midgardsblot
     }
