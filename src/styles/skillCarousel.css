@@ -1,0 +1,30 @@
+.skill-icons-carousel {
+  overflow: hidden;
+  padding: 20px 0;
+  width: 100vw;
+}
+.skill-icons-carousel .marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.skill-icons-carousel .marquee-wrapper .scrolling-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+}
+.skill-icons-carousel .marquee-wrapper .icon-card {
+  flex-shrink: 0;
+  width: 120px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.skill-icons-carousel .marquee-wrapper .icon-card:hover {
+  transform: scale(1.1);
+}
+.skill-icons-carousel .marquee-wrapper .icon-card img {
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=skillCarousel.css.map */

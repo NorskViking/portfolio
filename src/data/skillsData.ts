@@ -19,12 +19,13 @@ import TypescriptOriginal from "devicon/icons/typescript/typescript-original.svg
 import MysqlOriginalWordmark from "devicon/icons/mysql/mysql-original-wordmark.svg";
 import WordpressOriginal from "devicon/icons/wordpress/wordpress-original.svg";
 
-interface skillsData {
+interface skills {
     id: string;
     logo: string;
+    level?: number
 }
 
-export const skillsData = [
+export const skillsData: skills[] = [
     {
         id: 'HTML5',
         logo: Html5OriginalWordmark

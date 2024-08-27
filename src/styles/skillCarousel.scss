@@ -1,0 +1,45 @@
+$icon-size: 3rem;
+$icon-gap: 30px;
+$scale-on-hover: 1.1;
+$padding-vertical: 20px;
+
+.skills-section-container {
+    height: 6em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.skill-icons-marquee {
+    display: flex;
+    overflow: hidden;
+    padding: $padding-vertical 0;
+    width: 80%;
+    flex-direction: column;
+    position: relative;
+
+    .scrolling-wrapper {
+        display: flex;
+        align-items: center;
+        gap: $icon-gap;
+        height: 95%; // Make sure the height is consistent
+    }
+
+    .icon-card {
+        flex-shrink: 0;
+        width: 5em; // Adjust the width as needed
+        height: 5em;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+        flex-direction: column;
+
+        &:hover {
+            transform: scale($scale-on-hover);
+        }
+
+        img {
+            height: 4.2em; // Adjust the image height
+            object-fit: contain;
+            align-self: center;
+        }
+    }
+}

@@ -9221,6 +9221,7 @@ body {
 a {
   color: var(--bs-link-color);
   text-decoration: none;
+  size: 1.8em;
 }
 a:hover {
   color: var(--bs-link-hover-color);
