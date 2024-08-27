@@ -64,8 +64,8 @@ const LandingPage: React.FC = () => {
                                     <i className="bi bi-github" aria-hidden="true"></i>
                                 </a>
                             </Col>
-                            <SkillsPage />
                         </Row>
+                        <SkillsPage />
                     </div>
                 </Col>
             </Row>
