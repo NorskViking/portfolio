@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import SkillsMarquee from "../components/carousel/SkillMarquee";
+import SkillsMarquee from "../components/marquee/SkillMarquee";
 import { skillsData } from "../data/skillsData";
 
 const SkillSection: React.FC = () => {
