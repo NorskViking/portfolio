@@ -18,7 +18,6 @@ const DataCard: React.FC<DataCardProps> = ({ id, company, title, description, st
         <Card key={id} className="data-card mb-4 shadow-sm">
             <div className="card-logo-container">
                 {logo && (
-                    
                     <Card.Img 
                     variant="top"
                     src={logo}
