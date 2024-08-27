@@ -1,0 +1,44 @@
+$icon-size: 5em;
+$icon-gap: 30px;
+$scale-on-hover: 1.125;
+$padding-vertical: 20px;
+
+.skill-icons-marquee {
+    display: flex;
+    overflow: hidden;
+    padding: $padding-vertical 0;
+    width: 90%;
+    height: 12em;
+    position: relative;
+
+    .scrolling-wrapper {
+        display: flex;
+        align-items: center;
+        gap: $icon-gap;
+        height: 95%; // Make sure the height is consistent
+        padding-left: $icon-gap;
+        padding-right: $icon-gap;
+    }
+
+    .icon-card {
+        flex-shrink: 0;
+        width: $icon-size; // Adjust the width as needed
+        height: $icon-size;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+        flex-direction: column;
+        overflow: hidden;
+
+        &:hover,
+        &:focus {
+            transform: scale($scale-on-hover);
+            z-index: 1;
+        }
+
+        img {
+            height: 90%; // Adjust the image height
+            object-fit: contain;
+            align-self: center;
+        }
+    }
+}
