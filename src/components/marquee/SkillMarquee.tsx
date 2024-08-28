@@ -50,6 +50,7 @@ const SkillsMarquee: React.FC<SkillsMarqueeProps> = ({ skills }) => {
                 pauseOnClick={true}
                 delay={0}
                 play={true}
+                autoFill={true}
                 direction="left"
                 aria-label="Skills Marquee"
             >
@@ -72,6 +73,7 @@ const SkillsMarquee: React.FC<SkillsMarqueeProps> = ({ skills }) => {
                                     alt={skill.id}
                                     id={`skill-${index}`}
                                 />
+                                <Card.Text className="skill-id">{skill.id}</Card.Text>
                             </Card>
                         ))}
                 </div>
