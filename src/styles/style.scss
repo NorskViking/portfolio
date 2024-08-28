@@ -473,3 +473,55 @@ p, span, div {
 .text-muted {
     color: var(--bs-muted-color);
 }
+
+.scroll-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Ensures the buttons stay inside the container */
+    width: 100%;
+
+    .scroll-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 10px;
+        user-select: none;
+
+        &.scroll-left {
+            left: 0;
+        }
+
+        &.scroll-right {
+            right: 0;
+        }
+    }
+
+    .scroll-content {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        width: 100%; /* Take full width except space occupied by buttons */
+
+        /* Adjust cards to ensure consistent layout */
+        & > * {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            margin-right: 10px; /* Adjust margin for better spacing */
+        }
+
+        /* Hide the scrollbar but still allow scrolling */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        
+        &::-webkit-scrollbar {
+            display: none;  /* Chrome, Safari, and Opera */
+        }
+    }
+}
