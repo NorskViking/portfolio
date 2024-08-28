@@ -41,12 +41,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, tags,
                     iconStandard="bi bi-file-code"
                     iconHover="bi bi-file-code-fill"
                     title={`${title} - github project folder`}
+                    ariaLabel={`weblink, ${title} - github project folder`}
                 />
                 <IconButton 
                     href={demo}
                     iconStandard="bi bi-file-play"
                     iconHover="bi bi-file-play-fill"
                     title={`${title} - demo page`}
+                    ariaLabel={`weblink, ${title} - demo page`}
                 />
             </Card.Footer>
         </Card>

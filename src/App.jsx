@@ -11,6 +11,7 @@ import NavbarComponent from './components/navbar/NavbarComponent';
 import LandingPage from './pages/LandingPage';
 import About from './pages/AboutPage';
 import Projects from './pages/ProjectsPage';
+import ProjectSection from './pages/ProjectSection';
 
 const App: React.FC = () => {
   const isDarkMode = useSelector((state: Rootstate) => state.theme.isDarkMode);
@@ -30,6 +31,7 @@ const App: React.FC = () => {
       <Container fluid className='App' style={{padding: "0", margin: "0", fontSize, fontFamily}}>
         <NavbarComponent />
         <LandingPage />
+        <ProjectSection />
         <About />
         <Projects />
       </Container>

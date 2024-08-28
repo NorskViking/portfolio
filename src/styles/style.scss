@@ -75,6 +75,7 @@ $logo-bg-light: #F0F0F0;
 
     // Card
     --bs-card-custom-bg: #{$dark-primary};
+    --bs-card-bg: #{$dark-primary};
     --bs-card-color: #{$dark-text};
     --bs-card-custom-border-color: #{$dark-border};
     --bs-logo-custom-bg: lighten(#{$logo-bg-dark}, 10%);
@@ -148,6 +149,7 @@ $logo-bg-light: #F0F0F0;
 
     // Card
     --bs-card-custom-bg: #{$light-primary};
+    --bs-card-bg: #{$light-primary};
     --bs-card-color: #{$light-text};
     --bs-card-custom-border-color: #{$light-border};
     --bs-logo-custom-bg: darken(#{$logo-bg-light}, 10%);
@@ -333,7 +335,7 @@ body {
 }
 
 .navbar-brand .navbar-logo {
-    max-height: 90%;
+    height: 3.2em;
 }
 
 .navbar-nav .nav-link {
