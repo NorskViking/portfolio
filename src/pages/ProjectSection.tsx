@@ -7,17 +7,22 @@ import "./projectSection.scss"
 //import { BsChevronLeft, BsChevronRight } from "react-icons/bs"; // Import icons for the arrows
 
 const ProjectSection: React.FC = () => {
-    const scrollRef = useRef<HTMLDivElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
 
     const scrollLeft = () => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollBy({ left: -300, behavior: "smooth" }); // Adjust the scroll amount as needed
+        if (containerRef.current) {
+            const container = containerRef.current;
+            const scrollAmount = container.offsetWidth / 1.5;
+            container.scrollLeft -= scrollAmount;
+            //scrollRef.current.scrollBy({ left: -300, behavior: "smooth" }); // Adjust the scroll amount as needed
         }
     };
 
     const scrollRight = () => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollBy({ left: 300, behavior: "smooth" }); // Adjust the scroll amount as needed
+        if (containerRef.current) {
+            const container = containerRef.current;
+            const scrollAmount = container.offsetWidth / 1.5;
+            container.scrollLeft += scrollAmount;
         }
     };
 
@@ -41,7 +46,7 @@ const ProjectSection: React.FC = () => {
                 <i className="bi bi-caret-right"></i>
             </Button>
 
-            <div className="scroll-container" ref={scrollRef}>
+            <div className="scroll-container" ref={containerRef}>
                 <Row className="flex-nowrap">
                     {projectData.map((project) => (
                         <Col
