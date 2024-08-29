@@ -367,6 +367,7 @@ body {
 }
 
 // Card
+/**
 .card {
     background-color: var(--bs-card-custom-bg);
     color: var(--bs-card-color);
@@ -384,6 +385,81 @@ body {
     align-items: center;
     margin: 0.25em;
     padding: 0.25em;
+}
+*/
+.card {
+    background-color: var(--bs-card-custom-bg);
+    color: var(--bs-card-color);
+    border: 1px solid var(--bs-card-custom-border-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin: 0.5em;
+    padding: 1em;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-logo-container {
+        display: flex;
+        height: 5.2em;
+        width: auto;
+        object-fit: contain !important;
+        justify-content: center;
+        align-items: center;
+        margin: 0.25em;
+        padding: 0.25em;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.75em;
+        text-align: center;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .card-footer {
+        justify-content: space-between;
+    }
+
+    @media (max-width: 768px) {
+        .card-title {
+            font-size: 1.25rem;
+        }
+        
+        .card-text {
+            font-size: 0.9rem;
+        }
+
+        .card-logo-container {
+            height: 4.5em;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .card-title {
+            font-size: 1rem;
+        }
+        
+        .card-text {
+            font-size: 0.8rem;
+        }
+
+        .card-logo-container {
+            height: 4em;
+        }
+    }
 }
 
 // Container
@@ -474,8 +550,10 @@ p, span, div {
     color: var(--bs-muted-color);
 }
 
+// Scroll Container
 .scroll-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     position: relative;
     overflow: hidden; /* Ensures the buttons stay inside the container */
@@ -485,13 +563,18 @@ p, span, div {
         background: none;
         border: none;
         cursor: pointer;
-        font-size: 2rem;
+        font-size: 2em;
         position: absolute;
         z-index: 10;
         top: 50%;
         transform: translateY(-50%);
         padding: 0 10px;
         user-select: none;
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
 
         &.scroll-left {
             left: 0;
@@ -507,11 +590,12 @@ p, span, div {
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
-        width: 100%; /* Take full width except space occupied by buttons */
+        width: 100%;
+        flex-grow: 1;
 
         /* Adjust cards to ensure consistent layout */
         & > * {
-            flex: 0 0 auto;
+            flex: 0 0 calc(100% - 20px);
             scroll-snap-align: center;
             margin-right: 10px; /* Adjust margin for better spacing */
         }
@@ -522,6 +606,41 @@ p, span, div {
         
         &::-webkit-scrollbar {
             display: none;  /* Chrome, Safari, and Opera */
+        }
+
+        @media (min-width: 576px) {
+            & > * {
+                flex: 0 0 calc(100% - 20px);
+            }
+        }
+
+        @media (min-width: 768px) {
+            & > * {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+
+        @media (min-width: 992px) {
+            & > * {
+                flex: 0 0 calc(33.33% - 20px);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            & > * {
+                flex: 0 0 calc(33.33% - 20px);
+            }
+        }
+    }
+
+    .pagination-indicator {
+        margin-top: 10px;
+    }
+
+    &.no-overflow {
+        .scroll-button,
+        .pagination-indicator {
+            display: none;
         }
     }
 }
