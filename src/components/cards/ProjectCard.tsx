@@ -45,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, tags,
                     title={`${title} - github project folder`}
                     ariaLabel={`weblink, ${title} - github project folder`}
                 />
-                <IconButton 
+                <IconButton
                     href={demo}
                     iconStandard="bi bi-file-play"
                     iconHover="bi bi-file-play-fill"

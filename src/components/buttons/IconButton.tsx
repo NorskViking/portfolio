@@ -9,7 +9,8 @@ interface IconButtonProps {
     variant?: string;
     onClick?: () => void;
     ariaLabel?: string;
-    disabled?: boolean; 
+    disabled?: boolean;
+    className?: string;
 }
 
 const IconButton: React.FC<IconButtonProps> = ({
@@ -20,7 +21,8 @@ const IconButton: React.FC<IconButtonProps> = ({
         variant = 'primary',
         onClick,
         ariaLabel,
-        disabled = false
+        disabled = false,
+        className,
     }) => {
     const [isACtive, setIsActive] = useState(false);
 
@@ -46,6 +48,7 @@ const IconButton: React.FC<IconButtonProps> = ({
                 onClick={onClick}
                 variant={variant}
                 disabled={disabled}
+                className={className}
                 style={{ 
                     position: "relative",
                     display: "inline-block",

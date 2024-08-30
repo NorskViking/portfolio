@@ -89,6 +89,7 @@ const ScrollContainer: React.FC<ScrollContainerProps> = ({
                 title={ariaLabelLeft}
                 onClick={() => scroll("left")}
                 disabled={currentIndex === 0}
+                className="scroll-button scroll-left"
                 />
             )}
             <Container className="scroll-content" ref={containerRef}>
@@ -102,6 +103,7 @@ const ScrollContainer: React.FC<ScrollContainerProps> = ({
                 title={ariaLabelRight}
                 onClick={() => scroll("right")}
                 disabled={currentIndex === totalCards - 1}
+                className="scroll-button scroll-right"
                 />
             )}
             <Pagination className="pagination-indicator">
