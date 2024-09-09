@@ -6,8 +6,8 @@ import Image from "react-bootstrap/Image";
 // Import of components
 import SettingsButton from "../buttons/SettingsButton";
 // Import of assets
-import logoLight from "../../assets/png/Logo - LightBlue.png"
-import logoDark from "../../assets/png/Logo - DarkBlue.png"
+import logoLight from "../../assets/webp/Logo - LightBlue.webp"
+import logoDark from "../../assets/webp/Logo - DarkBlue.webp"
 import "bootstrap-icons/font/bootstrap-icons.css";
 // Import of Redux logic
 import { useSelector } from "react-redux";

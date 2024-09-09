@@ -1,6 +1,6 @@
-import rps from "../assets/png/logo_rock_paper_scissors.png";
-import codecademy from "../assets/png/logo_codecademy.png";
-//import raskeladden from "..assets/png/lo";
+import rps from "../assets/webp/logo_rock_paper_scissors.webp";
+import codecademy from "../assets/webp/logo_codecademy.webp";
+import raskeladden from "../assets/webp/raskeladden.webp";
 
 interface project {
     id: number;
@@ -20,7 +20,7 @@ export const projectData: project[] = [
         tags: ['Github', 'Godot', 'Asana'],
         code: "https://github.com/FunkWeb/spill6",
         demo: "https://funksoft.no/raskeladden/Raskeladden.og.Dovreslubben.html",
-        logo: rps
+        logo: raskeladden
     },
     {
         id: 2,
