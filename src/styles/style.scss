@@ -367,6 +367,7 @@ body {
 }
 
 // Card
+/**
 .card {
     background-color: var(--bs-card-custom-bg);
     color: var(--bs-card-color);
@@ -384,6 +385,99 @@ body {
     align-items: center;
     margin: 0.25em;
     padding: 0.25em;
+}
+*/
+.card {
+    background-color: var(--bs-card-custom-bg);
+    color: var(--bs-card-color);
+    border: 1px solid var(--bs-card-custom-border-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin: 0.5em;
+    padding: 1em;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-logo-container {
+        display: flex;
+        height: 5.2em;
+        width: auto;
+        object-fit: contain !important;
+        justify-content: center;
+        align-items: center;
+        margin: 0.25em;
+        padding: 0.25em;
+
+        .img {
+            object-fit: contain;
+        }
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.75em;
+        text-align: center;
+    }
+
+    .card-subtitle {
+        text-align: center;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .card-footer {
+        justify-content: space-between;
+        width: 100%;
+        font-size: 1.2em;
+        
+        .btn {
+            transition: transform 0.3s ease-in-out;
+            
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .card-title {
+            font-size: 1.25rem;
+        }
+        
+        .card-text {
+            font-size: 0.9rem;
+        }
+
+        .card-logo-container {
+            height: 4.5em;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .card-title {
+            font-size: 1rem;
+        }
+        
+        .card-text {
+            font-size: 0.8rem;
+        }
+
+        .card-logo-container {
+            height: 4em;
+        }
+    }
 }
 
 // Container
@@ -472,4 +566,118 @@ p, span, div {
 
 .text-muted {
     color: var(--bs-muted-color);
+}
+
+// Scroll Container
+.scroll-container {
+    position: relative; /* Important: relative positioning to allow absolute child positioning */
+    display: flex;
+    flex-direction: column; /* Only applies to the content and pagination */
+    overflow: hidden;
+    width: 100%;
+
+    /* Scroll buttons */
+    .scroll-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 2em;
+        position: absolute; /* Absolute positioning to detach from flex */
+        z-index: 10;
+        padding: 10px;
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Ensure vertical centering */
+        user-select: none;
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        &.scroll-left {
+            left: 0; /* Place on the left */
+        }
+
+        &.scroll-right {
+            right: 0; /* Place on the right */
+        }
+    }
+
+    /* Scroll content */
+    .scroll-content {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        width: 100%;
+        flex-grow: 1;
+
+        & > * {
+            flex: 0 0 calc(100% - 20px);
+            scroll-snap-align: center;
+            margin-right: 10px;
+        }
+
+        /* Hide the scrollbar */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;  /* Chrome, Safari, Opera */
+        }
+
+        /* Responsive adjustments for different screen sizes */
+        @media (min-width: 576px) {
+            & > * {
+                flex: 0 0 calc(100% - 20px); /* 1 card on small screens */
+            }
+        }
+
+        @media (min-width: 768px) {
+            & > * {
+                flex: 0 0 calc(50% - 20px); /* 2 cards on medium screens */
+            }
+        }
+
+        @media (min-width: 992px) {
+            & > * {
+                flex: 0 0 calc(33.33% - 20px); /* 3 cards on large screens */
+            }
+        }
+    }
+
+    /* Pagination */
+    .pagination-indicator {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+
+        /* Active pagination item */
+        .page-item.active .page-link {
+            background-color: #0077B6; /* Active page background */
+            border-color: #0077B6;
+            color: white;
+        }
+
+        /* Page links */
+        .page-link {
+            border: none;
+            color: #0077B6;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    /* Hide buttons and pagination when there's no overflow */
+    &.no-overflow {
+        .scroll-button,
+        .pagination-indicator {
+            display: none;
+        }
+    }
 }

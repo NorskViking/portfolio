@@ -8900,6 +8900,7 @@ progress {
   --bs-btn-hover-bg: darken(#0077B6, 10%);
   --bs-btn-hover-border-color: darken(#0096C7, 10%);
   --bs-card-custom-bg: #0077B6;
+  --bs-card-bg: #0077B6;
   --bs-card-color: #FFFFFF;
   --bs-card-custom-border-color: #495057;
   --bs-logo-custom-bg: lighten(#2C2C2C, 10%);
@@ -8948,6 +8949,7 @@ progress {
   --bs-btn-hover-bg: darken(#ADE8F4, 10%);
   --bs-btn-hover-border-color: darken(#90E0EF, 10%);
   --bs-card-custom-bg: #ADE8F4;
+  --bs-card-bg: #ADE8F4;
   --bs-card-color: #000000;
   --bs-card-custom-border-color: #DEE2E6;
   --bs-logo-custom-bg: darken(#F0F0F0, 10%);
@@ -9157,10 +9159,18 @@ body {
 .navbar {
   background-color: var(--bs-navbar-bg);
   color: var(--bs-navbar-color);
+  height: 4em;
 }
 
 .navbar-brand {
   color: var(--bs-navbar-brand-color);
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 3.8em;
+}
+
+.navbar-brand .navbar-logo {
+  height: 3.2em;
 }
 
 .navbar-nav .nav-link {
@@ -9187,15 +9197,45 @@ body {
   color: var(--bs-btn-primary-color);
 }
 
+/**
+.card {
+    background-color: var(--bs-card-custom-bg);
+    color: var(--bs-card-color);
+    border: 1px solid var(--bs-card-custom-border-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin: 0.2em;
+}
+
+.card-logo-container {
+    display: flex;
+    height: 5.2em;
+    width: auto;
+    object-fit: contain !important;
+    justify-content: center;
+    align-items: center;
+    margin: 0.25em;
+    padding: 0.25em;
+}
+*/
 .card {
   background-color: var(--bs-card-custom-bg);
   color: var(--bs-card-color);
   border: 1px solid var(--bs-card-custom-border-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  margin: 0.2em;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.card-logo-container {
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.card .card-logo-container {
   display: flex;
   height: 5.2em;
   width: auto;
@@ -9205,6 +9245,38 @@ body {
   align-items: center;
   margin: 0.25em;
   padding: 0.25em;
+}
+.card .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75em;
+  text-align: center;
+}
+.card .card-text {
+  font-size: 1rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .card .card-title {
+    font-size: 1.25rem;
+  }
+  .card .card-text {
+    font-size: 0.9rem;
+  }
+  .card .card-logo-container {
+    height: 4.5em;
+  }
+}
+@media (max-width: 576px) {
+  .card .card-title {
+    font-size: 1rem;
+  }
+  .card .card-text {
+    font-size: 0.8rem;
+  }
+  .card .card-logo-container {
+    height: 4em;
+  }
 }
 
 .container {
@@ -9284,4 +9356,60 @@ p, span, div {
 
 .text-muted {
   color: var(--bs-muted-color);
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Ensures the buttons stay inside the container */
+  width: 100%;
+}
+.scroll-container .scroll-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2em;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.scroll-container .scroll-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.scroll-container .scroll-button.scroll-left {
+  left: 0;
+}
+.scroll-container .scroll-button.scroll-right {
+  right: 0;
+}
+.scroll-container .scroll-content {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+  flex-grow: 1;
+  /* Adjust cards to ensure consistent layout */
+  /* Hide the scrollbar but still allow scrolling */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scroll-container .scroll-content > * {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  margin-right: 10px; /* Adjust margin for better spacing */
+}
+.scroll-container .scroll-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+.scroll-container .pagination-indicator {
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */

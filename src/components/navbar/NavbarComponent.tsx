@@ -44,13 +44,13 @@ function NavbarComponent() {
                         <i className="bi bi-house-fill"> </i>
                         Home
                     </Nav.Link>
-                    <Nav.Link href="#about">
-                        <i className="bi bi-person-circle"> </i>
-                        About
-                    </Nav.Link>
                     <Nav.Link href="#projects">
                         <i className="bi bi-journal-code"> </i>
                         Projects
+                    </Nav.Link>
+                    <Nav.Link href="#about">
+                        <i className="bi bi-person-circle"> </i>
+                        About
                     </Nav.Link>
                     <Nav.Item>
                         <SettingsButton />

@@ -28,8 +28,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, tags,
             </Container>
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
-                    {tags.join(", ")}
+                <Card.Subtitle className="text-muted">
+                    {tags.map(tag => (
+                        <Badge pill className="m-1 p-2">{tag}</Badge>
+                    ))}
                 </Card.Subtitle>
                 <Card.Text>
                     {description}
@@ -43,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, description, tags,
                     title={`${title} - github project folder`}
                     ariaLabel={`weblink, ${title} - github project folder`}
                 />
-                <IconButton 
+                <IconButton
                     href={demo}
                     iconStandard="bi bi-file-play"
                     iconHover="bi bi-file-play-fill"

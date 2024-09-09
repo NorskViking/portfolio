@@ -10,7 +10,6 @@ import Container from "react-bootstrap/Container";
 import NavbarComponent from './components/navbar/NavbarComponent';
 import LandingPage from './pages/LandingPage';
 import About from './pages/AboutPage';
-import Projects from './pages/ProjectsPage';
 import ProjectSection from './pages/ProjectSection';
 
 const App: React.FC = () => {
@@ -33,7 +32,6 @@ const App: React.FC = () => {
         <LandingPage />
         <ProjectSection />
         <About />
-        <Projects />
       </Container>
   );
 }
