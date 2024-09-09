@@ -9246,15 +9246,33 @@ body {
   margin: 0.25em;
   padding: 0.25em;
 }
+.card .card-logo-container .img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .card .card-title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.75em;
   text-align: center;
 }
+.card .card-subtitle {
+  text-align: center;
+}
 .card .card-text {
   font-size: 1rem;
   text-align: center;
+}
+.card .card-footer {
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.2em;
+}
+.card .card-footer .btn {
+  transition: transform 0.3s ease-in-out;
+}
+.card .card-footer .btn:hover {
+  transform: scale(1.2);
 }
 @media (max-width: 768px) {
   .card .card-title {
@@ -9359,23 +9377,26 @@ p, span, div {
 }
 
 .scroll-container {
+  position: relative; /* Important: relative positioning to allow absolute child positioning */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow: hidden; /* Ensures the buttons stay inside the container */
+  flex-direction: column; /* Only applies to the content and pagination */
+  overflow: hidden;
   width: 100%;
+  /* Scroll buttons */
+  /* Scroll content */
+  /* Pagination */
+  /* Hide buttons and pagination when there's no overflow */
 }
 .scroll-container .scroll-button {
   background: none;
   border: none;
   cursor: pointer;
   font-size: 2em;
-  position: absolute;
+  position: absolute; /* Absolute positioning to detach from flex */
   z-index: 10;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0 10px;
+  padding: 10px;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Ensure vertical centering */
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -9385,10 +9406,10 @@ p, span, div {
   cursor: not-allowed;
 }
 .scroll-container .scroll-button.scroll-left {
-  left: 0;
+  left: 0; /* Place on the left */
 }
 .scroll-container .scroll-button.scroll-right {
-  right: 0;
+  right: 0; /* Place on the right */
 }
 .scroll-container .scroll-content {
   display: flex;
@@ -9397,19 +9418,58 @@ p, span, div {
   scroll-behavior: smooth;
   width: 100%;
   flex-grow: 1;
-  /* Adjust cards to ensure consistent layout */
-  /* Hide the scrollbar but still allow scrolling */
+  /* Hide the scrollbar */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  /* Responsive adjustments for different screen sizes */
 }
 .scroll-container .scroll-content > * {
-  flex: 0 0 auto;
+  flex: 0 0 calc(100% - 20px);
   scroll-snap-align: center;
-  margin-right: 10px; /* Adjust margin for better spacing */
+  margin-right: 10px;
 }
 .scroll-container .scroll-content::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, and Opera */
+  display: none; /* Chrome, Safari, Opera */
+}
+@media (min-width: 576px) {
+  .scroll-container .scroll-content > * {
+    flex: 0 0 calc(100% - 20px); /* 1 card on small screens */
+  }
+}
+@media (min-width: 768px) {
+  .scroll-container .scroll-content > * {
+    flex: 0 0 calc(50% - 20px); /* 2 cards on medium screens */
+  }
+}
+@media (min-width: 992px) {
+  .scroll-container .scroll-content > * {
+    flex: 0 0 calc(33.33% - 20px); /* 3 cards on large screens */
+  }
 }
 .scroll-container .pagination-indicator {
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  /* Active pagination item */
+  /* Page links */
+}
+.scroll-container .pagination-indicator .page-item.active .page-link {
+  background-color: #0077B6; /* Active page background */
+  border-color: #0077B6;
+  color: white;
+}
+.scroll-container .pagination-indicator .page-link {
+  border: none;
+  color: #0077B6;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+}
+.scroll-container .pagination-indicator .page-link:hover {
+  text-decoration: underline;
+}
+.scroll-container.no-overflow .scroll-button,
+.scroll-container.no-overflow .pagination-indicator {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
