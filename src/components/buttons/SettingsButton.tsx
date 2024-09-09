@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
 import SettingsModal from "../modal/SettingsModal";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import IconButton from "./IconButton";
