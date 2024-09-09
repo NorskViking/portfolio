@@ -570,23 +570,23 @@ p, span, div {
 
 // Scroll Container
 .scroll-container {
+    position: relative; /* Important: relative positioning to allow absolute child positioning */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    overflow: hidden; /* Ensures the buttons stay inside the container */
+    flex-direction: column; /* Only applies to the content and pagination */
+    overflow: hidden;
     width: 100%;
 
+    /* Scroll buttons */
     .scroll-button {
         background: none;
         border: none;
         cursor: pointer;
         font-size: 2em;
-        position: absolute;
+        position: absolute; /* Absolute positioning to detach from flex */
         z-index: 10;
-        top: 50%;
-        transform: translateY(-50%);
-        padding: 0 10px;
+        padding: 10px;
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Ensure vertical centering */
         user-select: none;
 
         &:disabled {
@@ -595,14 +595,15 @@ p, span, div {
         }
 
         &.scroll-left {
-            left: 0;
+            left: 0; /* Place on the left */
         }
 
         &.scroll-right {
-            right: 0;
+            right: 0; /* Place on the right */
         }
     }
 
+    /* Scroll content */
     .scroll-content {
         display: flex;
         overflow-x: scroll;
@@ -611,50 +612,68 @@ p, span, div {
         width: 100%;
         flex-grow: 1;
 
-        /* Adjust cards to ensure consistent layout */
         & > * {
             flex: 0 0 calc(100% - 20px);
             scroll-snap-align: center;
-            margin-right: 10px; /* Adjust margin for better spacing */
+            margin-right: 10px;
         }
 
-        /* Hide the scrollbar but still allow scrolling */
+        /* Hide the scrollbar */
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
-        
         &::-webkit-scrollbar {
-            display: none;  /* Chrome, Safari, and Opera */
+            display: none;  /* Chrome, Safari, Opera */
         }
 
+        /* Responsive adjustments for different screen sizes */
         @media (min-width: 576px) {
             & > * {
-                flex: 0 0 calc(100% - 20px);
+                flex: 0 0 calc(100% - 20px); /* 1 card on small screens */
             }
         }
 
         @media (min-width: 768px) {
             & > * {
-                flex: 0 0 calc(50% - 20px);
+                flex: 0 0 calc(50% - 20px); /* 2 cards on medium screens */
             }
         }
 
         @media (min-width: 992px) {
             & > * {
-                flex: 0 0 calc(33.33% - 20px);
-            }
-        }
-
-        @media (min-width: 1200px) {
-            & > * {
-                flex: 0 0 calc(33.33% - 20px);
+                flex: 0 0 calc(33.33% - 20px); /* 3 cards on large screens */
             }
         }
     }
 
+    /* Pagination */
     .pagination-indicator {
         margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+
+        /* Active pagination item */
+        .page-item.active .page-link {
+            background-color: #0077B6; /* Active page background */
+            border-color: #0077B6;
+            color: white;
+        }
+
+        /* Page links */
+        .page-link {
+            border: none;
+            color: #0077B6;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
+    /* Hide buttons and pagination when there's no overflow */
     &.no-overflow {
         .scroll-button,
         .pagination-indicator {
