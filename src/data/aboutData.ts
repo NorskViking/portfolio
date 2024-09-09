@@ -1,19 +1,19 @@
 // Education Assets
-import UiO from "../assets/png/uio_logo.png";
-import sandeVGS from "../assets/png/sandevgs.png";
-import northview from "../assets/png/northview_highschool_logo.png";
+import UiO from "../assets/webp/uio_logo.webp";
+import sandeVGS from "../assets/webp/sandevgs.webp";
+import northview from "../assets/webp/northview_highschool_logo.webp";
 // Work Assets
-import groenland from "../assets/png/gronland_bryggeri_logo.png";
-import adecco from "../assets/png/adecco_logo.png";
-import funkweb from "../assets/png/funkweb_suksess_logo.png";
+import groenland from "../assets/webp/gronland_bryggeri_logo.webp";
+import adecco from "../assets/webp/adecco_logo.webp";
+import funkweb from "../assets/webp/funkweb_suksess_logo.webp";
 // Volunteer Assets
-import inferno from "../assets/jpeg/Inferno.jpg";
-import midgardsblot from "../assets/png/Midgardsblot.png";
-import tonsOfRock from "../assets/png/TonsOfRock.png";
-import cyb from "../assets/jpeg/CybernetiskSelskab.jpg";
-import kshb from "../assets/jpeg/KristianiaStudentenesHaandbryggerlaug.jpg";
-import rf from "../assets/png/RealistForeningen.png";
-import tt from "../assets/png/Tappetårnet.png";
+import inferno from "../assets/webp/Inferno.webp";
+import midgardsblot from "../assets/webp/Midgardsblot.webp";
+import tonsOfRock from "../assets/webp/TonsOfRock.webp";
+import cyb from "../assets/webp/CybernetiskSelskab.webp";
+import kshb from "../assets/webp/KristianiaStudentenesHaandbryggerlaug.webp";
+import rf from "../assets/webp/RealistForeningen.webp";
+import tt from "../assets/webp/Tappetårnet.webp";
 
 interface data {
     id: number;
