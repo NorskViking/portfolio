@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import SettingsModal from "../modal/SettingsModal";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "./settingsButton.css";
+import IconButton from "./IconButton";
 
 const SettingsButton: React.FC = () => {
     const [showModal, toggleShowModal] = useState(false);
@@ -12,14 +12,14 @@ const SettingsButton: React.FC = () => {
 
     return (
         <>
-            <Button
+            <IconButton
                 variant="primary"
-                id="settingsButton"
                 onClick={handleShow}
-                aria-label="Settings button"
-            >
-                <i className="bi bi-gear"></i>
-            </Button>
+                title="SettingsButton"
+                iconStandard="bi bi-gear"
+                iconHover="bi bi-gear-fill"
+                ariaLabel="Settings button"
+            />
             {<SettingsModal show={showModal} handleClose={handleClose} />}
         </>
     )

@@ -1,12 +1,16 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
-import { Rootstate } from "./store/rootReducer"
-import Container from "react-bootstrap/Container";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles/custom.scss';
+import "./styles/style.scss";
+
+//import './styles/_custom.scss';
+import { Rootstate } from "./store/rootReducer"
+import { useSelector } from 'react-redux';
+import Container from "react-bootstrap/Container";
 
 import NavbarComponent from './components/navbar/NavbarComponent';
 import LandingPage from './pages/LandingPage';
+import About from './pages/AboutPage';
+import ProjectSection from './pages/ProjectSection';
 
 const App: React.FC = () => {
   const isDarkMode = useSelector((state: Rootstate) => state.theme.isDarkMode);
@@ -26,6 +30,8 @@ const App: React.FC = () => {
       <Container fluid className='App' style={{padding: "0", margin: "0", fontSize, fontFamily}}>
         <NavbarComponent />
         <LandingPage />
+        <ProjectSection />
+        <About />
       </Container>
   );
 }

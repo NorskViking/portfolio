@@ -1,0 +1,45 @@
+.skill-icons-marquee {
+  display: flex;
+  overflow: hidden;
+  padding: 20px 0;
+  width: 90%;
+  height: 12em;
+  position: relative;
+}
+.skill-icons-marquee .scrolling-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 95%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.skill-icons-marquee .icon-card {
+  flex-shrink: 0;
+  width: 5.2em;
+  height: 5.2em;
+  justify-content: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--bs-logo-custom-bg);
+}
+.skill-icons-marquee .icon-card .skill-id {
+  visibility: collapse;
+  font-size: 0.8em;
+}
+.skill-icons-marquee .icon-card:hover, .skill-icons-marquee .icon-card:focus {
+  transform: scale(1.125);
+  z-index: 1;
+}
+.skill-icons-marquee .icon-card:hover .skill-id, .skill-icons-marquee .icon-card:focus .skill-id {
+  visibility: visible;
+}
+.skill-icons-marquee .icon-card img {
+  height: 85%;
+  padding: 0.2em;
+  align-self: center;
+  background-color: var(--bs-logo-custom-bg);
+}/*# sourceMappingURL=skillMarquee.css.map */

@@ -6,8 +6,9 @@ import Image from "react-bootstrap/Image";
 // Import of components
 import SettingsButton from "../buttons/SettingsButton";
 // Import of assets
-import logoLight from "../../assets/png/Logo - LightBlue.png"
-import logoDark from "../../assets/png/Logo - DarkBlue.png"
+import logoLight from "../../assets/webp/Logo - LightBlue.webp"
+import logoDark from "../../assets/webp/Logo - DarkBlue.webp"
+import "bootstrap-icons/font/bootstrap-icons.css";
 // Import of Redux logic
 import { useSelector } from "react-redux";
 import { Rootstate } from "../../store/rootReducer";
@@ -26,24 +27,31 @@ function NavbarComponent() {
             sticky="top"
             id="navbar"
             role="navigation"
-            style={{height: "4rem"}}
             aria-current="page"
         >
             <Container fluid className="justify-content-between mx-auto">
                 <Navbar.Brand className="justify-content-start">
                     <Image
+                        className="navbar-logo"
                         src={logo}
-                        alt="navbar logo image, with the text: Jørgen Baumann." 
-                        width={70}
-                        height={70}
+                        alt="navbar logo image, with the text: Jørgen Baumann."
                         aria-label="Jørgen Baumann Logo"
                     />
                 </Navbar.Brand>
                 <Nav className="d-flex align-items-center justify-content-end">
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="ms-auto"/>
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#about">About</Nav.Link>
-                    <Nav.Link href="#projects">Projects</Nav.Link>
+                    <Nav.Link href="#landingPage">
+                        <i className="bi bi-house-fill"> </i>
+                        Home
+                    </Nav.Link>
+                    <Nav.Link href="#projects">
+                        <i className="bi bi-journal-code"> </i>
+                        Projects
+                    </Nav.Link>
+                    <Nav.Link href="#about">
+                        <i className="bi bi-person-circle"> </i>
+                        About
+                    </Nav.Link>
                     <Nav.Item>
                         <SettingsButton />
                     </Nav.Item>

@@ -19,12 +19,12 @@ import TypescriptOriginal from "devicon/icons/typescript/typescript-original.svg
 import MysqlOriginalWordmark from "devicon/icons/mysql/mysql-original-wordmark.svg";
 import WordpressOriginal from "devicon/icons/wordpress/wordpress-original.svg";
 
-interface skillsData {
+interface skills {
     id: string;
     logo: string;
 }
 
-export const skillsData = [
+export const skillsData: skills[] = [
     {
         id: 'HTML5',
         logo: Html5OriginalWordmark
@@ -47,77 +47,62 @@ export const skillsData = [
     },
     {
         id: 'Node JS',
-        logo: NodejsOriginalWordmark,
-        level: 3.5
+        logo: NodejsOriginalWordmark
     },
     {
         id: 'React',
-        logo: ReactOriginalWordmark,
-        level: 4
+        logo: ReactOriginalWordmark
     },
     {
         id: 'Express',
-        logo: ExpressOriginal,
-        level: 2.5
+        logo: ExpressOriginal
     },
     {
         id: 'Python',
-        logo: PythonOriginalWordmark,
-        level: 2.5
+        logo: PythonOriginalWordmark
     },
     {
         id: 'Django',
-        logo: DjangoPlain,
-        level: 2.5
+        logo: DjangoPlain
     },
     {
         id: 'Bootstrap',
-        logo: BootstrapOriginalWordmark,
-        level: 2.5
+        logo: BootstrapOriginalWordmark
     },
     {
         id: 'Godot',
-        logo: GodotOriginalWordmark,
-        level: 3
+        logo: GodotOriginalWordmark
     },
     {
         id: 'PostgreSQL',
-        logo: PostgresqlOriginalWordmark,
-        level: 3
+        logo: PostgresqlOriginalWordmark
     },
     {
         id: 'SQLite',
-        logo: SqliteOriginalWordmark,
-        level: 2.5
+        logo: SqliteOriginalWordmark
     },
     {
         id: 'MySQL',
-        logo: MysqlOriginalWordmark,
-        level: 2.5
+        logo: MysqlOriginalWordmark
     },
     {
         id: 'Github',
-        logo: GithubOriginalWordmark,
-        level: 4
+        logo: GithubOriginalWordmark
     },
     {
         id: 'Csharp',
-        logo: CsharpOriginal,
-        level: 2
+        logo: CsharpOriginal
     },
     {
         id: 'DotNet',
-        logo: DotNetOriginalWordmark,
-        level: 2
+        logo: DotNetOriginalWordmark
     },
     {
         id: 'Figma',
-        logo: FigmaOriginal,
-        level: 2
+        logo: FigmaOriginal
     },
     {
         id: 'WordPress',
-        logo: WordpressOriginal,
-        level: 2.5
+        logo: WordpressOriginal
     }
 ]
